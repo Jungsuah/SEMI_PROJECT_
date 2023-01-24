@@ -1,0 +1,1123 @@
+-- WEB 계정 생성
+-- CREATE USER MHJ IDENTIFIED BY MHJ;
+-- GRANT RESOURCE, CONNECT TO MHJ;
+-- 계정 삭제하기
+-- drop user MHJ cascade;
+
+
+------------------------------------------------------------------------------
+------------------------------< HERITAGE >---------------------------------
+------------------------------------------------------------------------------
+-- 문화재
+DROP TABLE HERITAGE CASCADE CONSTRAINTS;
+CREATE TABLE HERITAGE(
+    no                   NUMBER,
+    sn                    NUMBER,
+    ccmaName          VARCHAR2(50),         
+    crltsnoNm           NUMBER,           
+    ccbaMnm1          VARCHAR2(100),        
+    ccbaMnm2          VARCHAR2(100),            
+    ccbaCtcdNm        VARCHAR2(50),        
+    ccsiName             VARCHAR2(50),         
+    ccbaAdmin            VARCHAR2(100),        
+    ccbaKdcd             VARCHAR2(50), 
+    ccbaCtcd             VARCHAR2(50),
+    ccbaAsno             VARCHAR2(100),
+    ccbaCncl             VARCHAR2(50),
+    ccbaCpno             VARCHAR2(100),
+    longitude            VARCHAR2(100),
+
+    latitude             VARCHAR2(100),
+    gcodeName            VARCHAR2(50),
+    bcodeName            VARCHAR2(50),
+    mcodeName            VARCHAR2(50),
+    scodeName            VARCHAR2(50),
+    ccbaQuan             VARCHAR2(50),
+    ccbaAsdt             VARCHAR2(100),
+    ccbaLcad             VARCHAR2(500),
+    ccceName             VARCHAR2(100),
+    ccbaPoss             VARCHAR2(50),
+    imageUrl             VARCHAR2(100),
+    content              CLOB,
+    PRIMARY KEY (no)
+);
+
+select * from HERITAGE;
+	
+	
+DROP TABLE HERITAGEIMAGE CASCADE CONSTRAINTS;
+CREATE TABLE HERITAGEIMAGE (
+    imageNo             NUMBER,    
+    imageUrl              VARCHAR2(100) unique,
+    ccimDesc             VARCHAR2(500),
+    sn                      NUMBER,
+    no                     NUMBER,
+    ccbaKdcd             VARCHAR2(50), 
+    ccbaCtcd             VARCHAR2(50),
+    ccbaAsno             VARCHAR2(100),
+    PRIMARY KEY (imageNo)
+);
+
+DROP SEQUENCE SEQ_HERITAGE_Image; 
+CREATE SEQUENCE SEQ_HERITAGE_Image;
+
+select * from HERITAGEIMAGE;
+
+
+DROP TABLE HERITAGEVIDEO CASCADE CONSTRAINTS;
+CREATE TABLE HERITAGEVIDEO (
+    videoNo             NUMBER,    
+    videoUrl             VARCHAR2(100) unique, 
+    sn                     NUMBER,
+    no                    NUMBER,
+    ccbaKdcd            VARCHAR2(50), 
+    ccbaCtcd            VARCHAR2(50),
+    ccbaAsno            VARCHAR2(100),
+    PRIMARY KEY (videoNo)
+);
+
+DROP SEQUENCE SEQ_HERITAGE_Video; 
+CREATE SEQUENCE SEQ_HERITAGE_Video;
+
+select * from HERITAGEVIDEO;
+
+
+-- 문화재 DAO
+
+--INSERT INTO HERITAGE
+--(sn, no, ccmaName, crltsnoNm, ccbaMnm1, 
+--ccbaMnm2, ccbaCtcdNm, ccsiName, ccbaAdmin, ccbaKdcd, 
+--ccbaCtcd, ccbaAsno, ccbaCncl, ccbaCpno, longitude, 
+--latitude, gcodeName, bcodeName, mcodeName, scodeName, 
+--ccbaQuan, ccbaAsdt, ccbaLcad, ccceName, ccbaPoss, 
+--imageUrl, content) 
+--VALUES
+--(?, ?, ?, ?, ?, 
+--?, ?, ?, ?, ?, 
+--?, ?, ? ,?, ?, 
+--?, ?, ?, ?, ?, 
+--?, ?, ?, ?, ?, 
+--?, ?)
+
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+----------------------------------<PALACE>-----------------------------------
+--------------------------------------------------------------------------------
+-- 궁궐, 종묘 상세
+DROP TABLE Palace_Jongmyo_Sangse CASCADE CONSTRAINTS;
+CREATE TABLE Palace_Jongmyo_Sangse (
+    seq_pj_ss            NUMBER, 
+    serial_number      NUMBER UNIQUE,            
+    gung_number      NUMBER ,            
+    detail_code         NUMBER ,            
+    contents_kor        VARCHAR2(50),   
+    contents_eng       VARCHAR2(50), 
+    contents_jpa        VARCHAR2(50),    
+    contents_chi        VARCHAR2(50), 
+    explanation_kor      CLOB,              
+    explanation_eng     CLOB,              
+    explanation_jpa      CLOB,              
+    explanation_chi      CLOB,
+    imgurl                 VARCHAR2(100)
+);
+
+DROP SEQUENCE seq_pj_ss;
+CREATE SEQUENCE seq_pj_ss;
+
+SELECT * FROM Palace_Jongmyo_Sangse;
+
+
+-- 궁궐 종묘 이미지
+DROP TABLE Palace_Jongmyo_Image_Sangse CASCADE CONSTRAINTS;
+CREATE TABLE Palace_Jongmyo_Image_Sangse (
+    serial_number       NUMBER ,            
+    gung_number         NUMBER ,            
+    detail_code         NUMBER , 
+    imageIndex          VARCHAR2(50), 
+    imageContentsKor   VARCHAR2(50), 
+    imageContentsEng    VARCHAR2(50), 
+    imageContentsChi  VARCHAR2(50), 
+    imageContentsJpa   VARCHAR2(50), 
+    imageExplanationKor  VARCHAR2(500) UNIQUE, 
+    imageExplanationEng CLOB,
+    imageExplanationChi CLOB,
+    imageExplanationJpa CLOB,
+    imageUrl            VARCHAR2(100)
+);
+--SELECT * FROM Palace_Jongmyo_Image_Sangse;
+
+
+-- 궁궐 종묘 동영상
+DROP TABLE Palace_Jongmyo_Movie_Sangse CASCADE CONSTRAINTS;
+CREATE TABLE Palace_Jongmyo_Movie_Sangse (
+    serial_number         NUMBER ,            
+    gung_number         NUMBER ,            
+    detail_code            NUMBER , 
+    movieIndex            VARCHAR2(50), 
+    movieContentsKor    VARCHAR2(100),  
+    movieContentsEng    VARCHAR2(50), 
+    movieContentsChi     VARCHAR2(50),  
+    movieContentsJpa     VARCHAR2(50), 
+    movieUrlKor            VARCHAR2(600) UNIQUE, 
+    movieUrlEng         VARCHAR2(200),
+    movieUrlChi         VARCHAR2(200),
+    movieUrlJpa          VARCHAR2(200)
+);
+--SELECT * FROM Palace_Jongmyo_Movie_Sangse;
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+-------------------------------------<EVENT>---------------------------------
+--------------------------------------------------------------------------------
+--행사 정보
+DROP TABLE EVENT_INFO CASCADE CONSTRAINTS;
+CREATE TABLE EVENT_INFO(
+            seqNo	   	    NUMBER	NULL,
+	subtitle		VARCHAR2(100)	NULL,
+	subContent	VARCHAR2(200)	NULL,
+	sDate	    	VARCHAR2(50)	NULL,
+	eDate	    	VARCHAR2(50)	NULL,
+	groupName	VARCHAR2(50)	NULL,
+	contact	   	VARCHAR2(50)	NULL,
+	subDesc	   	VARCHAR2(50)	NULL,
+	subPath	   	VARCHAR2(50)	NULL,
+	subDesc_2 	VARCHAR2(50)	NULL,
+	subDesc_3 	VARCHAR2(50)	NULL,
+	mainImageTemp	VARCHAR2(50)	NULL,
+	sido	    	VARCHAR2(50)	NULL,
+	gugun	    	VARCHAR2(50)	NULL,
+	subDate	    	VARCHAR2(100)	NULL,
+	fileNm	    	VARCHAR2(50)	NULL,
+	filePath		VARCHAR2(50)	NULL,
+	siteCode		VARCHAR2(50)	NULL,
+            PRIMARY KEY (seqNo)	   
+);
+
+SELECT * FROM EVENT_INFO;
+
+DROP TABLE EVENT_NAME CASCADE CONSTRAINTS;
+CREATE TABLE EVENT_NAME (
+	siteCode		VARCHAR2(50)	NULL,
+	eventName	VARCHAR2(50)	NULL,
+	PRIMARY KEY (siteCode)
+);
+
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('01','문화재야행');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('02','생생문화재');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('03','전통산사문화재');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('04','살아숨쉬는 향교·서원 ');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('06','기타행사');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('07','국립무형유산원');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('08','한국문화재재단');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('09','고택·종갓집');
+INSERT INTO EVENT_NAME (siteCode,eventName)VALUES ('10','세계유산');
+
+SELECT * FROM EVENT_NAME;
+
+ -- 행사 DAO
+ -- < 행사구분명 / 프로그램명 / 장소 = 시도 - 구군 - 위치  / 기간 = 시작일자 - 종료일자 >
+SELECT en.eventname, EI.subtitle, EI.sido ,EI.gugun, EI.subDesc ,EI.sDate, EI.EDate, EI.subPath
+FROM EVENT_INFO EI,  EVENT_NAME EN
+WHERE EI.siteCode = EN.siteCode 
+AND EI.sDate Like '202105%'
+ORDER BY EI.sDate;
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+-----------------------------<COMMUNITY>----------------------------------
+--1. Free Board - Free Reply  / 2. together Board - together Reply / 3. History Board - History Reply
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--------------------------< Free Board >-------------------------------------
+
+DROP TABLE FREE_BOARD CASCADE CONSTRAINTS;
+CREATE TABLE FREE_BOARD (
+	NO 		NUMBER,
+	UNO		NUMBER,
+	TITLE 		VARCHAR2(1000),
+	CONTENT	VARCHAR2(2000),
+	TYPE 		VARCHAR2(100),
+	ORIGINAL_FILE 	VARCHAR2(1000),
+	RENAMED_FILE 	VARCHAR2(1000),
+	READCOUNT 	NUMBER DEFAULT 0,
+	STATUS	VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN('Y', 'N')),
+	CREATE_DATE DATE DEFAULT SYSDATE,
+	MODIFY_DATE DATE DEFAULT SYSDATE,
+	CONSTRAINT PK_FREEBOARD_NO PRIMARY KEY(NO),
+    	CONSTRAINT FK_FREEBOARD_WRITER FOREIGN KEY(UNO) REFERENCES USERINFO(UNO) ON DELETE SET NULL
+);
+
+COMMENT ON COLUMN FREE_BOARD.NO IS '게시글번호';
+COMMENT ON COLUMN FREE_BOARD.UNO IS '회원번호(게시글작성자)';
+COMMENT ON COLUMN FREE_BOARD.TITLE IS '게시글제목';
+COMMENT ON COLUMN FREE_BOARD.CONTENT IS '게시글내용';
+COMMENT ON COLUMN FREE_BOARD.TYPE IS '게시글 타입';
+COMMENT ON COLUMN FREE_BOARD.ORIGINAL_FILE IS '첨부파일원래이름';
+COMMENT ON COLUMN FREE_BOARD.RENAMED_FILE IS '첨부파일변경이름';
+COMMENT ON COLUMN FREE_BOARD.READCOUNT IS '조회수';
+COMMENT ON COLUMN FREE_BOARD.STATUS IS '상태값(Y/N)';
+COMMENT ON COLUMN FREE_BOARD.CREATE_DATE IS '게시글올린날짜';
+COMMENT ON COLUMN FREE_BOARD.MODIFY_DATE IS '게시글수정날짜';
+
+
+DROP SEQUENCE SEQ_FREE_NO;
+CREATE SEQUENCE SEQ_FREE_NO;
+
+-- TEST용 가짜 데이터
+
+BEGIN
+    FOR N IN 1..60
+    LOOP
+        INSERT INTO FREE_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1, '자유게시판 '||SEQ_FREE_NO.CURRVAL , '게시글 테스트입니다.'||SEQ_FREE_NO.CURRVAL, 'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE);
+    END LOOP;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN ROLLBACK;
+END;
+/
+
+INSERT INTO FREE_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1, '자유게시판 첫번째',  '자유게시판 글 내용', 'F', '원본파일명.txt', '변경된파일명.txt', DEFAULT, 'Y', SYSDATE, SYSDATE);
+
+INSERT INTO FREE_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1, 
+'코딩 참 쉽지 않나요?', 
+'학생들 가르치기 너무 힘드네요. 그냥 하면 되는 거 아닌가요? 최근에 본 영화 탑건에서 그러더군요. Dont'' think. Just do it! 그냥 하면 되는거잖아요. 참 쉽지 않나요?', 
+'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1, 
+'문화재 설명에 관해' , '문화재를 설명하는 글에 이 문화재를 건설하기 위해서 얼마나 많은 민중이 희생되었는지, 어떤 과정에서 건설되었는지를 표기하는 것이 어떨까요?' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1, 
+'경복궁 직원분을 칭찬합니다.' , '안녕하세요 ~ 오늘 가족이랑 경복궁을 다녀왔는데, 경복궁에서 광화문 쪽으로 나가는 방향 쪽에서
+저희 엄마가 계단을 내려오다가 넘어져서 다치는 일이 발생했습니다. 한 남자직원분께서 구급 상자 들고 달려오셔서 구급약 필요한 것 다 쓰게 해주시고 괜찮냐고 물어봐주시고 너무 감사했습니다.
+궁궐 놀러왔다가 다치면 안되신다고 하시면서 안심시켜주셨어요 . 오늘이 올 여름 들어 최고 기온이였다는데 이런 무더위에도 시민들을 위해 애써주셔서 다시 한번 정말 감사합니다. 덕분에, 기분 좋은 궁궐 관람을 할 수 있었습니다.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'고궁해설사분들을 칭찬합니다' , '평소 고궁에 관심이 많아 이것저것 찾아보지만 제가 보는 책들은 자세한 설명이 없어 직접 보면서도 건물의 용도에 대해 궁금하곤 했습니다.
+경복궁에 갈때마다 보면서 의문만 생기는데 향원정 근처에서 정규 해설을 끝마치고 돌아가시려는 해설사님을 마주쳤고 질문하게 됐습니다. 돌아가시는 길에 귀찮으셨을텐데 친절하게 가서 찾아보고 알려주시겠다고 이후 문자로 친절하게 설명해주셨습니다. 워낙 더운날이기도했고 해설을 듣는 사람이 저 하나뿐이었는데 더 자세한 설명을 해주시기도하고 고궁속 궁금했던 이야기들 질문에 답변도 너무 친절하게 해주시고 이런 해설을 하시면서 들려주시는 이야기들이 너무 흥미로워서 도서 추천도 받고, 평소 고궁 이야기를 받아주는 친구는 없었기에 너무 행복했던 시간이었습니다.
+' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL,1, 
+'2021년 최고의 국보는?' , '국보와 보물, 오늘을 살아가는 당신에게 어떤 의미가 있나요?
+국보와 보물로 지정된다는 것은 최고의 국가 문화유산이자 인류 문화유산으로서 보편적 가치가 부여되는 것을
+뜻합니다. 우리 선조들이 남긴 문화유산에 관심을 갖고 지혜롭게 보존하는 것이야말로 우리의 의무이자 사명일 것입니다.
+문화재청 유형문화재과에서는 매년 국보, 보물 신규 지정 업무를 수행하고 있습니다.
+2021년에는 국보 2건이 새롭게 지정되었습니다.
+새롭게 지정 된 국보 중 하나의 국보를 꼽으라고 한다면 여러분은 어떤 것을 꼽으시겠어요?
+우리 문화유산의 풍부한 가치를 오래도록 보존하고 후대에 전승할 수 있도록 국민 여러분의 많은 관심을 부탁드립니다.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'세종대왕릉과 효종대왕릉의 관람만족도에 대해 남겨주세요' , '문화재청 궁능유적본부 세종대왕유적관리소는 세종대왕 영릉(英陵)과 효종대왕 영릉(寧陵)을 보존하고, 민족의 성군인 세종대왕을 널리 기리며 그분의 유덕과 위업을 계승하여 후손에게 이어주는 일을 하고 있습니다. 
+이와 관련하여 관람객들에게 보다 편리하고 수준높은 관람서비스를 제공하고, 세종대왕 영릉과 효종대왕 영릉을 국민들이 편안하게 휴식할 수 있는 공간으로 만들어 나가기 위하여 다음과 같이 국민들의 의견을 수렴하고자 하오니  응해주시면 감사하겠습니다.
+귀하께서 응답하신 내용은 통계적 목적으로만 사용되고, 개인정보는 통계법에 따라 철저하게 보호되며, 향후 결과는 세종대왕유적관리소의 운영을 위한 귀중한 자료로 활용될 예정입니다. 최근 세종대왕릉이나 효종대왕릉을 관람하신 경우 어느 정도 만족하십니까?
+세종대왕릉과 효종대왕릉의 관람환경과 관람서비스의 향상을 위해서 어떤 부분을 개선하면 좋을까요? 세종대왕릉과 효종대왕릉의 관람 및 운영전반에 대하여 좋은 의견이 있을 경우 말씀해 주세요.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'문화재청 현충사관리소 충무공이순신기념관 기획전시를 알려드립니다.' , '현충사관리소는 현충사 사당구역과 이충무공묘소가 별도 구분되어 관리되고 있습니다.(9Km 거리)
+현재 이충무공묘소는 1977년 이후 정비가 되지않아 주변자연과 조화를 이루는 친환경적인 조선시대 묘지로 개선하고자
+2018년부터 현재까지 종합정비사업을 하고 있습니다.
+이에, 종합정비사업으로 참배가 제한되어 충무공이순신기념관에 충무공 이순신 묘 영상 및 참배공간을 마련하여
+이충무공 묘에 참배하기를 원하는 관람객들에게 참배기회를 제공하고자 합니다.
+ㅇ 전시기간 : 2021.12~이충무공묘(음봉소재) 참배 제한 해제까지
+ㅇ 전시장소 : 현충사관리소 충무공이순신기념관 전시실 기획전시실'  ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'조선시대 왕릉은 서울과 경기도에만 있나요?' , '조선시대 능역은 한양으로부터의 거리, 그리고 주변지역과의 거리, 도로와의 관계, 경계, 주변의 산세와의 
+관계(풍수지리적 고려)를 통하여 입지를 선택하였습니다. 조선 초기에는 도성으로부터 10리 이내와 인가로부터 100보 이내에 
+묘지를 쓰는 것을 법전으로 금지하였다가 조선시대 말기에는 한양으로부터 100리 이내와 인가로부터 50보 이내에는 매장을 하지 못하도록 
+하였습니다. 현존하는 조선시대 왕릉의 위치를 살펴보면 대부분의 능은 서울지역과 경기지역(고양시, 광명시, 
+남양주시, 구리시, 파주시, 화성시, 김포시 등)에 위치하고 있습니다. 그러나 모든 능이 반드시 서울지역과 경기지역에만 위치하는 
+것은 아니며 단종의 묘인 장릉은 강원도 영월군에, 태조의 6대 조부모의 묘인 준경묘와 영경묘는 강원도 삼척군에 있으며, 사후 추존된 왕을 포함한 
+10기의 왕릉은 북한에 있습다.'  ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'문화재 설명에 관해' , '문화유산은 문화재를 포괄하는 개념입니다.
+그러나 실제로는 문화유산과 문화재를 정확하게 구분하지 않고 일반적으로 섞어 사용하고 있습니다.
+일반적으로 ‘유산’은 ‘遺産, Heritage’ 라고 표현되며, ‘재’는 ‘財, Property’ 라고 표현되고 있습니다.
+즉, ‘유산’은 우리가 타고난 혹은 이어 받은 모든 것을 포함하는 것이며, ‘재’는 여기에 가치의 개념이 덧붙여 진 것을 뜻합니다.
+특히 ‘유산’에는 인간이 가치를 부여하기 이전의 모든 자연적, 인공적인 유무형의 모든 대상이 포함되기 때문에
+자연에 의하여 만들어진 독특한 경관을 ‘자연유산’ 이라 하며, ‘자연재’라고 하지는 않음에서 쉽게 그 차이를 알 수 있습니다.
+한편, ‘문화유산 혹은 문화재’ 라는 말에서 알 수 있듯이 ‘재’에는 기본적으로 인간이 만들어낸 ‘문화’를 바탕으로 하고 있으며,
+그 문화의 범주 안에서 독특하거나 뛰어나거나 아름답거나 하는 ‘가치’가 있다고 판단되는 대상물이 ‘문화재’의 대상이 될 수 있는 것입니다.
+'  ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'문화재의 보존환경이 중요한 이유는 무엇인가요?' , '문화재를 구성하고 있는 재질은 주위의 환경요인에 따라 금속은 녹이 슬고, 암석은 풍화되고, 목재는 해충의 피해, 섬유는 광이나 공기에 의해 손상 
+됩니다. 이러한 재질의 열화에 의해 미술공예품, 고고유물, 건조물 등의 유형문화재가 구조, 형태, 색의 변화를 
+초래합니다. 환경을 구성하고 있는 인자는 온도, 습도, 광, 가스상오염물질, 입자상오염물질, 미생물 등 상당히 복잡하여, 환경 
+연구를 수행하기 위해서 이러한 환경인자와 환경을 구성하는 장소를 연대하여 검토할 필요가 있습니다. 환경을 구성하는 장소로서는 
+미술공예품의 경우 미술관, 박물관의 수장고와 전시실, 미술품 이동에 따른 포장상자 속, 옥외 등이 있습니다. 또한 건조물의 경우에는 
+건조물 자체가 하나의 환경을 구성하고 있습니다. 따라서 이러한 환경 장소와 환경 인자와의 관계를 검토하여 연구를 진행하는 것이 매우 
+중요합니다. ' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'조선시대 궁궐과 대문의 이름은 어떻게 지었나요?' , '조선시대에 지어진 궁궐은 경복궁(景福宮), 창덕궁(昌德宮), 창경궁(昌慶宮), 경희궁(慶熙宮), 덕수궁(德壽宮) 등 5대 궁궐이 있습니다.
+경복궁은 조선 창건초기《시경》의‘군자만년개이경복(君子萬年介爾景福)’이란 글귀에서 따 경복궁이라 하였습니다.
+궁궐문의 이름은 음양오행을 기본으로 지어졌으며, 궁궐 중앙의 문은 임금의 정치를 
+의미하는‘政’자가 주로 사용되었으며 동·서·남·북문은 각각 봄, 가을, 여름, 겨울을 의미하므로‘春’, ‘秋’등의 글자가 사용되었습니다. 
+ 또한 궁궐 남문(정문)의 이름에는 공통적으로‘化’자가 들어가는데 이는 백성을 교화(敎化)하여 감화(感化)한다는 의미로 
+사용한 것입니다. 조선시대에 조성된 서울의 대표적인 궁궐은 경복궁, 창덕궁, 창경궁, 경희궁, 경운궁(덕수궁) 등 5대 궁궐이 
+있었으나 경희궁은 원형이 크게 훼손되어 제외하였습니다.
+궁궐은 일반적으로 궁(宮)과 궐(闕)이 합쳐진 말로서 경복궁의 정문은 
+광화문(光化門), 창덕궁은 돈화문(敦化門), 창경궁은 홍화문(弘化門), 경희궁은 흥화문(興化門), 경운궁은 인화문(仁化門)으로 지어졌습니다. 
+그러나 경운궁은 1906년 현재 위치의 대안문(大安門)을 정문으로 사용하면서 대한문(大漢門)으로 명칭이 바뀌어 오늘에 이르고 있습니다.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'해외에 있는 우리 문화재를 국보나 보물로 지정할 수 있나요?' , '문화재 지정은 문화재보호법 제4조 규정에 의거 현재 우리나라에 소재하는 문화재 중 국가적·민족적 유산으로서 역사적, 예술적, 학술적 가치가 큰 것을 국보 또는 보물로 지정하고 있습니다.
+따라서 국내법의 효력이 미치지 않는 해외 소재 문화재에 대해서는 국보나 보물로 지정할 수 없습니다.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'문화재의 지정은 어떻게 합니까?' , '1. 지정 신청 - 문화재 지정은 문화재 지정을 받고자 하는 해당 문화재 소유자, 
+점유자, 관리자 및 중요무형문화재(보유단체 포함) 보유자가 시·도지사 또는 시·군·구청장에게 신청하는 절차로부터 시작됩니다.
+
+2. 사전 조사 - 신청을 접수한 도· 시·군·구청 등에서는 문화재청에 자료를 제출하고 문화재청에서는 관계전문가(문화재위원, 문화재전문위원, 기타 
+관계전문가)에게 조사를 요청하여 조사토록 합니다. 관계전문가는 조사한 결과를 보고서로 작성하여 문화재청에 제출합니다.
+
+3. 문화재위원회의 심의 - 문화재청장은 조사 결과를 바탕으로 문화재위원회에 심의를 의뢰하며, 문화재 위원회의 심의 후 그 결과를 문화재청에 보내며 
+지정 결정시 문화관광부 장관의 결재를 거쳐 지정하도록 되어 있습니다.
+
+4. 지정 결과의 통지 - 이렇게 지정이 되면 문화재청에서는 시·도지사, 시·군·구청장에게 지정통지를 하며 시·도지사 및 시·군·구청장은 문화재의 소유자, 점유자, 관리자 및 중요무형문화재보유자에게 
+지정통지를 합니다. ' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'문화재보호구역이란 무엇인가요?' , ' 국가지정문화재를 지정함에 있어 그 문화재의 보호를 위하여 특히 필요한 경우 문화재 주변의 일정구역을 설정하여 문화재를 물리적, 환경적, 경관적으로 보호할 필요가 있는 구역을 문화재보호구역이라고 합니다.
+국가지정문화재의 지정보호구역 지정절차는 국가지정문화재 지정절차와 동일합니다.
+국가지정문화재 보호구역은 문화재 보호를 위해 필요하다고 인정될 경우 확대하여 지정할 수 있습니다. 또한, 국가지정문화재의 지정·해제와 마찬가지로 특별히 축소할 만한 사유가 있을 경우 축소할 수 있습니다. 보호구역 확대 또는 축소 하는 절차는 보호구역의 지정절차와 동일합니다.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'땅속에 묻혀있던 문화재를 우연히 발견하면 어떻게 해야 하나요?' , ' 밭갈이를 하던 중에 도자기를 발견하거나 집을 짓기 위해 땅을 파다가 매장문화재를 발견하게 되면 곧바로 작업을 중단하고 지형이 변경되지 않도록 현상을 보존하고 가까운 관공서(해당 지자체 문화재 담당부서 또는 경찰서에 습득한 매장문화재를 신고하여야 합니다.
+신고를 받은 기관에서는 문화재보호법이 정한 절차에 따라 처리하며, 그 결과를 신고자에게 통보하고 있습니다.
+발견 신고자에게는 문화재의 가치를 감정하여 보상금을 지급하며, 신고하지 않았을 경우에는 은닉죄 등을 적용하여 처벌을 받게 됩니다
+발견이란 우연한 기회에 드러난 문화재를 찾은 것을 말하며, 땅속에 묻혀있는 것을 일부러 파내어 신고하는 것은 도굴에 해당됩니다.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO freeBoard (freeNo,freeTitle,freeContents,freeDate,uNo) VALUES (SEQ_freeNo.NEXTVAL, 1,
+'문화재의 정의를 알려주세요' , '문화재는 조상으로부터 물려받은 유산이며, 후손들에게 길이 물려주어야 하는 귀중한 자산입니다. 문화재는 각 나라 또는 겨레들이 독특한 역사의 풍토 안에서 이루어낸 전통의 산물로서 국가의 정체성을 확립하는데 가장 중요한 구실을 합니다.
+문화재보호법(아래에서는 '법'으로 칭함) 제2조1항에서는 "문화재라 함은 인위적·자연적으로 형성된 국가적·민족적·세계적 유산으로서 역사적·예술적·학술적·경관적 가치가 큰 것을 말한다."라고 정의하고 있습니다. 여기에서 말하는 문화재는 국가에서 지정하는 문화재의 기준이 되고 있습니다.
+문화재는 성격에 따라 유형문화재, 무형문화재, 기념물, 민속자료로 나룰 수 있고, 매장문화재는 땅속에 들어가 있을 때는 따로 구분하게 되지만 발굴과정을 거쳐 드러나는 유물은 유형문화재가 됩니다.
+유형문화재는 건축, 회화, 공예작품을 비롯해 고문서 등 유형의 문화적 소산물을 말하며, 무형문화재는 연극, 음악, 무용, 공예기술 등 사람의 행위에 의해 비로소 나타나는 무형의 것을 이르는 말입니다. 기념물에는 역사기념물과 천연기념물이 있다. 역사기념물에는 고분, 궁궐터, 절터, 성터와 같은 역사유적들이 있으며, 경승지와 희귀 동식물들은 천연기념물로 구분합니다. 민속자료는 의식주, 생업, 신앙 등 풍속에 관련되는 것을 말합니다.
+국가에서는 문화재를 보호하기 위하여 이를 국가지정문화재와 시·도지정문화재, 문화재자료로 구분하고, 국가지정문화재는 국보, 보물, 중요무형문화재, 사적, 명승, 천연기념물, 중요민속자료로 지정하여 관리하고 있습니다.
+문화재를 보존하기 위해서 국가 또는 지방자치 단체에서 중요 문화재를 지정하고 있지만 문화재 지정에 따르는 현실적인 제약이 많고 국민의 일상생활을 침해할 수 있는 요소가 있기 때문에 문화재 지정은 신중한 판단이 요구되고 있습니다.
+지정문화재는 중요도에 따라 국가차원의 관리를 위한 것일 뿐, 지정되지 않은 문화재라고 하여도 지정문화재와 다름없는 가치가 있으며 법에 따라 보호를 받게 됩니다.' ,'F', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO FREE_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1, '장수왕의 평양성은 어디에?',  '장수왕의 평양성은 현 평양에 있었습니다. 최근 다른 사이트에 고구려 수도에 관한 자료를 올리니, 장수왕의 평양성이 요동에 있다는 의견을 제기하는 분이 계시더군요
+
+COMMIT;
+SELECT * FROM FREE_BOARD;
+
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+-----------------------------------< Free Reply >-----------------------------------
+
+DROP TABLE FREE_REPLY CASCADE CONSTRAINTS;
+
+CREATE TABLE FREE_REPLY(
+  NO  NUMBER PRIMARY KEY,
+  BOARD_NO NUMBER,
+  UNO NUMBER,
+  CONTENT VARCHAR2(400),
+  STATUS VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN ('Y', 'N')),
+  CREATE_DATE DATE DEFAULT SYSDATE,
+  MODIFY_DATE DATE DEFAULT SYSDATE,
+  FOREIGN KEY (BOARD_NO) REFERENCES FREE_BOARD,
+  FOREIGN KEY (UNO) REFERENCES USERINFO
+);
+
+DROP SEQUENCE SEQ_FREE_RNO;
+CREATE SEQUENCE SEQ_FREE_RNO;
+
+COMMENT ON COLUMN "FREE_REPLY"."NO" IS '댓글번호';
+COMMENT ON COLUMN "FREE_REPLY"."BOARD_NO" IS '댓글이작성된게시글';
+COMMENT ON COLUMN "FREE_REPLY"."UNO" IS '댓글작성자';
+COMMENT ON COLUMN "FREE_REPLY"."CONTENT" IS '댓글내용';
+COMMENT ON COLUMN "FREE_REPLY"."STATUS" IS '상태값(Y/N)';
+COMMENT ON COLUMN "FREE_REPLY"."CREATE_DATE" IS '댓글올린날짜';
+COMMENT ON COLUMN "FREE_REPLY"."MODIFY_DATE" IS '댓글수정날짜';
+
+INSERT INTO FREE_REPLY VALUES(SEQ_FREE_RNO.NEXTVAL, 51, 1, '안녕하세요.', DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO FREE_REPLY VALUES(SEQ_FREE_RNO.NEXTVAL, 50, 1, '반갑습니다.', DEFAULT, DEFAULT, DEFAULT);
+
+
+BEGIN
+    FOR N IN 50..60
+    LOOP
+        INSERT INTO FREE_REPLY VALUES(SEQ_FREE_RNO.NEXTVAL, N, 1, '안녕하세요.', DEFAULT, DEFAULT, DEFAULT);
+        INSERT INTO FREE_REPLY VALUES(SEQ_FREE_RNO.NEXTVAL, N, 1, '안녕하세요.', DEFAULT, DEFAULT, DEFAULT);
+        INSERT INTO FREE_REPLY VALUES(SEQ_FREE_RNO.NEXTVAL, N, 1, '안녕하세요.', DEFAULT, DEFAULT, DEFAULT);
+    END LOOP;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN ROLLBACK;
+END;
+/
+
+COMMIT;
+SELECT * FROM FREE_REPLY;
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
+--------------------------------< together Board >--------------------------------
+
+DROP TABLE TO_BOARD CASCADE CONSTRAINTS;
+CREATE TABLE TO_BOARD (
+	NO NUMBER,
+	UNO	NUMBER,
+	TITLE VARCHAR2(1000),
+	CONTENT	VARCHAR2(2000),
+	TYPE VARCHAR2(100),
+	ORIGINAL_FILE VARCHAR2(1000),
+	RENAMED_FILE VARCHAR2(1000),
+	READCOUNT NUMBER DEFAULT 0,
+	STATUS	VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN('Y', 'N')),
+	CREATE_DATE DATE DEFAULT SYSDATE,
+	MODIFY_DATE DATE DEFAULT SYSDATE,
+	CONSTRAINT PK_TOBOARD_NO PRIMARY KEY(NO),
+    CONSTRAINT FK_TOBOARD_WRITER FOREIGN KEY(UNO) REFERENCES USERINFO(UNO) ON DELETE SET NULL
+);
+
+COMMENT ON COLUMN TO_BOARD.NO IS '게시글번호';
+COMMENT ON COLUMN TO_BOARD.UNO IS '회원번호(게시글작성자)';
+COMMENT ON COLUMN TO_BOARD.TITLE IS '게시글제목';
+COMMENT ON COLUMN TO_BOARD.CONTENT IS '게시글내용';
+COMMENT ON COLUMN TO_BOARD.TYPE IS '게시글 타입';
+COMMENT ON COLUMN TO_BOARD.ORIGINAL_FILE IS '첨부파일원래이름';
+COMMENT ON COLUMN TO_BOARD.RENAMED_FILE IS '첨부파일변경이름';
+COMMENT ON COLUMN TO_BOARD.READCOUNT IS '조회수';
+COMMENT ON COLUMN TO_BOARD.STATUS IS '상태값(Y/N)';
+COMMENT ON COLUMN TO_BOARD.CREATE_DATE IS '게시글올린날짜';
+COMMENT ON COLUMN TO_BOARD.MODIFY_DATE IS '게시글수정날짜';
+
+
+DROP SEQUENCE SEQ_TO_NO;
+CREATE SEQUENCE SEQ_TO_NO;
+
+-- TEST용 가짜 데이터
+
+BEGIN
+    FOR N IN 1..60
+    LOOP
+        INSERT INTO TO_BOARD VALUES(SEQ_TO_NO.NEXTVAL, 1, '함께해요 게시판 '||SEQ_TO_NO.CURRVAL , '게시글 테스트입니다.'||SEQ_TO_NO.CURRVAL, 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE);
+    END LOOP;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN ROLLBACK;
+END;
+/
+
+INSERT INTO TO_BOARD VALUES(SEQ_TO_NO.NEXTVAL, 1, '함께해요 첫번째',  '함께해요 글 내용', 'free', '원본파일명.txt', '변경된파일명.txt', DEFAULT, 'Y', SYSDATE, SYSDATE);
+
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1, '★사뿐사뿐 오픈 카카오톡 5기 대모집!!★', 
+'24시간 마음껏 역사 이야기를 떠들어보세요!! 나이불문 국적불문(?) 관심사불문! 누구나 자유롭게 떠들수 있는 부흥 오톡 5기에 참가하실 분들을 모집합니다. 
+참여하실 분들은 ''반드시 본 모집 공지에 댓글을 달아주시길 바랍니다''',
+'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '[16th] 사뿐사뿐 투어 모집합니다.', 
+ '안녕하세요.  사뿐사뿐 투어의 모임장 입니다. 이번 16번째 탐방지는 경복궁입니다. 제 블로그를 통해 상세 내용을 확인하신 후, 아래의 오픈카톡 https://open.kakao.com/o/gXNB3Wse으로 입장 부탁드립니다.  감사합니다. ',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO FREE_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '(男마감)안동하회마을 게스트하우스 파티(25세-37세)', 
+ '매주 제가 운영하는 게스트하우스에서 주말 파티가 있습니다. 금주는 남자분이 마감이 되었고 여성분은 2자리 남았습니다, 매주 참여자 받고 있으니 리플 남겨주시면 제가 쪽지보내드리도록 하겠습니다. 감사합니다!',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '[온라인스터디] 학부생 온라인 역사 스터디 인원모집!!', 
+ '안녕하세요! 학부생 온라인 역사 스터디에 참여할 분들을 모집합니다. 1. 일시: 매주 일요일 오후 7시~ 2. 주제: 한국사라면 무엇이든 3. 모집: 역사 관련 전공 학부생(대학원 지망생에게 추천) 4. 방식: Zoom으로 실시간 온라인 발표 및 토론 5. 기타문의: 오픈 채팅방을 편하게 이용해주세요. 감사합니다! ',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '8월 15일 청와대 함께하실분!!!', 
+ '제가 해당일에 청와대 입장할 수 있는데, 함께 가기로 한 친구가 남친이랑 간다해서요. 혹시 저랑 같이 가실분 계실까요?',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '8월 30일(토) 안양->파주 / 1박 2일 4인 함께 가실분?!', 
+ '함께 가시기로 한 횐님 한분께서 급한 사정이 생기셔서 더 모집하려 합니다. 아래 댓글 달아주시면 저희 3인이 파주에서 방문하게 될 경로들을 공유해드리도록 하겠습니다. 일단 8월 30일(토) 안양역에서 10시에 모일 예정입니다. ',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '국립고궁박물관 환수문화재 특별전', 
+ '독서당 계회도가 제일 흥미롭습니다. 일정 협의후 함께 보러가실 분 계실까요? https://www.ktv.go.kr/content/view?content_id=652276 ',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '[사파역사문화학회] 2022년 하계 학술대회 발표자와 방청자분들을 모집합니다.', 
+ '오랜만에 인사드립니다. 사파역사문화학회 외무 선형채입니다. 이번 하계 오프라인학회는 8월 13일 토요일 오후 1시에 서울 서교문화센터 강의실(합정역 인근)에서 열릴 예정입니다. 이번 학술발표의 주제는 자유입니다. 발표를 준비하시는 분들께는 편한 마음으로 주제를 선정해서 신청해주시면 감사하겠습니다!',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '지금 경주문화재연구소에서 학회 생방중입니다.', 
+ 'https://www.youtube.com/watch?v=g1kNnTYp3EE 경주지역 적석목곽묘 현장설명회 중입니다! 함께 시청해요 ^^ ',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO TO_BOARD VALUES(SEQ_FREE_NO.NEXTVAL, 1,
+ '[사뿐사뿐정모] 9차 사뿐사뿐 학회  참여자 모집 안내.', 
+ ' 제 9차 사뿐사뿐문화학회 설명 1. 장소: 서울 동작구 흑석로9길 10 사뿐스터디카페 2룸 2. 일시: 2022년 8월 15일 (월) 오후 1시~5시(4시간 예정) 3. 인원: 20명까지 가능 4. 기한: 모집 7/20~ 8/5 정오까지 6. 기타: 참석을 원하시는 분들은 이 글에 덧글을 달아주시옵고 문의사항은 제 메일인 pinkychuchu@gmail.com으로 보내주시기바랍니다. 그러면 이것으로 학회 공지를 마치겠습니다. 감사합니다',
+ 'T', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+COMMIT;
+SELECT * FROM TO_BOARD;
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
+---------------------------------- <together Reply >------------------------------
+
+DROP TABLE TO_REPLY CASCADE CONSTRAINTS;
+CREATE TABLE TO_REPLY(
+  NO  NUMBER PRIMARY KEY,
+  BOARD_NO NUMBER,
+  UNO NUMBER,
+  CONTENT VARCHAR2(400),
+  STATUS VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN ('Y', 'N')),
+  CREATE_DATE DATE DEFAULT SYSDATE,
+  MODIFY_DATE DATE DEFAULT SYSDATE,
+  FOREIGN KEY (BOARD_NO) REFERENCES TO_BOARD,
+  FOREIGN KEY (UNO) REFERENCES USERINFO
+);
+
+DROP SEQUENCE SEQ_TO_RNO;
+CREATE SEQUENCE SEQ_TO_RNO;
+
+COMMENT ON COLUMN "TO_REPLY"."NO" IS '댓글번호';
+COMMENT ON COLUMN "TO_REPLY"."BOARD_NO" IS '댓글이작성된게시글';
+COMMENT ON COLUMN "TO_REPLY"."UNO" IS '댓글작성자';
+COMMENT ON COLUMN "TO_REPLY"."CONTENT" IS '댓글내용';
+COMMENT ON COLUMN "TO_REPLY"."STATUS" IS '상태값(Y/N)';
+COMMENT ON COLUMN "TO_REPLY"."CREATE_DATE" IS '댓글올린날짜';
+COMMENT ON COLUMN "TO_REPLY"."MODIFY_DATE" IS '댓글수정날짜';
+
+INSERT INTO TO_REPLY VALUES(SEQ_TO_RNO.NEXTVAL, 51, 1, '안녕하세요.', DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO TO_REPLY VALUES(SEQ_TO_RNO.NEXTVAL, 50, 1, '반갑습니다.', DEFAULT, DEFAULT, DEFAULT);
+
+
+BEGIN
+    FOR N IN 50..60
+    LOOP
+        INSERT INTO TO_REPLY VALUES(SEQ_TO_RNO.NEXTVAL, N, 1, '함께해요.', DEFAULT, DEFAULT, DEFAULT);
+        INSERT INTO TO_REPLY VALUES(SEQ_TO_RNO.NEXTVAL, N, 1, '함께해요.', DEFAULT, DEFAULT, DEFAULT);
+        INSERT INTO TO_REPLY VALUES(SEQ_TO_RNO.NEXTVAL, N, 1, '함께해요.', DEFAULT, DEFAULT, DEFAULT);
+    END LOOP;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN ROLLBACK;
+END;
+/
+
+COMMIT;
+SELECT * FROM TO_REPLY;
+------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
+-------------------------------- <History Board>----------------------------------
+
+DROP TABLE HIS_BOARD CASCADE CONSTRAINTS;
+CREATE TABLE HIS_BOARD (
+	NO NUMBER,
+	UNO	NUMBER,
+	TITLE VARCHAR2(1000),
+	CONTENT	VARCHAR2(2000),
+	TYPE VARCHAR2(100),
+	ORIGINAL_FILE VARCHAR2(1000),
+	RENAMED_FILE VARCHAR2(1000),
+	READCOUNT NUMBER DEFAULT 0,
+	STATUS	VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN('Y', 'N')),
+	CREATE_DATE DATE DEFAULT SYSDATE,
+	MODIFY_DATE DATE DEFAULT SYSDATE,
+	CONSTRAINT PK_HISBOARD_NO PRIMARY KEY(NO),
+    CONSTRAINT FK_HISBOARD_WRITER FOREIGN KEY(UNO) REFERENCES USERINFO(UNO) ON DELETE SET NULL
+);
+
+COMMENT ON COLUMN HIS_BOARD.NO IS '게시글번호';
+COMMENT ON COLUMN HIS_BOARD.UNO IS '회원번호(게시글작성자)';
+COMMENT ON COLUMN HIS_BOARD.TITLE IS '게시글제목';
+COMMENT ON COLUMN HIS_BOARD.CONTENT IS '게시글내용';
+COMMENT ON COLUMN HIS_BOARD.TYPE IS '게시글 타입';
+COMMENT ON COLUMN HIS_BOARD.ORIGINAL_FILE IS '첨부파일원래이름';
+COMMENT ON COLUMN HIS_BOARD.RENAMED_FILE IS '첨부파일변경이름';
+COMMENT ON COLUMN HIS_BOARD.READCOUNT IS '조회수';
+COMMENT ON COLUMN HIS_BOARD.STATUS IS '상태값(Y/N)';
+COMMENT ON COLUMN HIS_BOARD.CREATE_DATE IS '게시글올린날짜';
+COMMENT ON COLUMN HIS_BOARD.MODIFY_DATE IS '게시글수정날짜';
+
+
+DROP SEQUENCE SEQ_HIS_NO;
+CREATE SEQUENCE SEQ_HIS_NO;
+
+-- TEST용 가짜 데이터
+
+BEGIN
+    FOR N IN 1..60
+    LOOP
+        INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1, '역사연구소 게시판 '||SEQ_HIS_NO.CURRVAL , '게시글 테스트입니다.'||SEQ_HIS_NO.CURRVAL, 'H', null, null, DEFAULT, 'Y', SYSDATE, SYSDATE);
+    END LOOP;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN ROLLBACK;
+END;
+/
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1, '역사연구합시다.',  '역사연구소 글 내용', 'free', '원본파일명.txt', '변경된파일명.txt', DEFAULT, 'Y', SYSDATE, SYSDATE);
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'한국의 전통공예, 칠보공예 이야기',  
+'칠보 (Korean traditional enameling)은 금속 위에 유약을 바르는 한국의 공예기법입니다, 보다 일반적인 이름은 에나멜링 (Enameling)으로, 동일한 기법이 세계 각지에서 사용됐습니다. 우리 조상들 또한 에나멜링을 발전시켰습니다. 그들은 에나멜 공예품의 제작에 자신들의 미적 감각을 반영하고, 한국적인 공예기법 “칠보“를 탄생시켰습니다.',
+'H', null, null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'국외소재문화재 현황 및 환수가치에 관한 설문조사',  
+'안녕하세요. 저는 경희대학교 호텔관광대학 박사과정 재학중인 학생입니다. 비록 제 연구분야가 사학이나 문화재쪽은 아니지만, 역사문화관광은 즐겨하는 편이기에, 해외 소재 한국문화재의 현황과 환수에 관하여 연구할 기회가 있어서 진행하고 있습니다.
+아래 링크 또는 QR코드를 스캔하시면 설문참여가 가능하시며, 설문 시간은 대략 3-5분 정도 예상됩니다. 
+설문 피드백은 언제나 환영하며, 관련 문헌 또는 내용 공유가 가능하신 부분이 있다면 연구에 큰 도움이 될 듯합니다! 소중한 시간 내어주셔서 정말 감사드립니다.
+https://khusmarttour01.qualtrics.com/jfe/form/SV_1BwnMFi2D0LiX4y', 
+'H',  null, null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1, 
+'서원 철폐령 당시에 6개 남기고 다 철폐하였다 하였는데', 
+'지금 보면 그 6개 말고도 남아있는 서원들이 있는 것 같던데 전부 다 후대에 재건한 것인지요?','H', null,  null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'[미술사]꼭 봐야할 이건희 특별전, 어느 수집가의 초대 ',  
+'꼭 가서 보세요. 강추입니다. 이 전시만 봐도 한국 선사시대부터 21세기까지의 미술사를 모두 총망라합니다.https://blog.naver.com/rlaehrud96/222715917611', 
+'free',  null, null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'태종 이방원 세트 건축에 관한 생각',  
+'https://blog.naver.com/rlaehrud96/222596382307 굳이 이렇게 했어야 했나 싶네요. 전공자로서는 참 안타까운 현실입니다. 사실 지적하자면 끝이 없긴 한데.. 차라리 조선 후기의 양식으로 세트를 쓰는 것은 이해라도 하는데 이런 점들은 좀 항상 사극을 보다보면 참 안타깝네요.', 
+'H',  null, null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'러시아가 우크라이나 박물관에 있던 스키타이 유물을 약탈했다고 합니다.',  
+'https://www.khan.co.kr/world/world-general/article/202205011029001/?nv=stand&utm_source=naver&utm_medium=newsstand&utm_campaign=sub_thumb1&utm_content=202205011029001&C', 
+'H', null, null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'단청 역사 만화를 소개합니다.',  
+'오늘 점심시간 때 웹서핑을 하다가 발견이 되었는데, 드물게도 단청을 주제로 한 카툰을 발견했습니다. 하겐다즈쿠쿠란 분께서 그리신 만화인데, 워낙 유익한 내용이라 혹시나 해서 사뿐사뿐에 있나 싶어 찾아봤는데, 부재하여 링크를 걸었습니다. https://gall.dcinside.com/mgallery/board/view?id=historicalheritage&no=148 https://gall.dcinside.com/board/view?id=cartoon&no=623812', 
+'H',  null,  null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'실제 신라 유물로 두는 바둑',  
+'https://n.news.naver.com/mnews/article/277/0005079065?sid=103 기사를 보니 출토된 바둑돌로 개최한다는데 괜찮을까요? 바둑돌이 무사할까요?', 
+'free',  null, null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'1960년대 도정궁 모습',  
+'현재 GS사직주유소가 경원당 터이고 별채와 현재의 운경고택인 안채 사랑채가 남아있네요. 아마 사직로 중간쯤에 장행랑이 있던것으로 추측됩니다.', 
+'H',  null, null ,  DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+INSERT INTO HIS_BOARD VALUES(SEQ_HIS_NO.NEXTVAL, 1,
+'[미술] 북한사찰들은 안료나 단청양식에서 세세한 차이가 있나요?',  
+'북한사찰 문화재 사진들을 보다보면 뭔가 건물들이 남한하고 조금씩 다르지 않나 싶더라구요. 문외한인 저로써 소감을 말하자면 단청이나 살문양식이나 그런 것들이 조금씩 다른 것 같은데, 또 이게 그저 남한 사찰과 다르게 지속적인 개보수나 단청 덧칠작업같은 것을 하지 않아서 자연스러운 고색이 느껴지나 싶기도 하고요. 궁금하네요.', 
+'H',  null, null , DEFAULT, 'Y', SYSDATE, SYSDATE, DEFAULT);
+
+
+COMMIT;
+SELECT * FROM HIS_BOARD;
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
+---------------------------------< History Reply >---------------------------------
+
+DROP TABLE HIS_REPLY CASCADE CONSTRAINTS;
+CREATE TABLE HIS_REPLY(
+  NO  NUMBER PRIMARY KEY,
+  BOARD_NO NUMBER,
+  UNO NUMBER,
+  CONTENT VARCHAR2(400),
+  STATUS VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN ('Y', 'N')),
+  CREATE_DATE DATE DEFAULT SYSDATE,
+  MODIFY_DATE DATE DEFAULT SYSDATE,
+  FOREIGN KEY (BOARD_NO) REFERENCES HIS_BOARD,
+  FOREIGN KEY (UNO) REFERENCES USERINFO
+);
+
+DROP SEQUENCE SEQ_HIS_RNO;
+CREATE SEQUENCE SEQ_HIS_RNO;
+
+COMMENT ON COLUMN "HIS_REPLY"."NO" IS '댓글번호';
+COMMENT ON COLUMN "HIS_REPLY"."BOARD_NO" IS '댓글이작성된게시글';
+COMMENT ON COLUMN "HIS_REPLY"."UNO" IS '댓글작성자';
+COMMENT ON COLUMN "HIS_REPLY"."CONTENT" IS '댓글내용';
+COMMENT ON COLUMN "HIS_REPLY"."STATUS" IS '상태값(Y/N)';
+COMMENT ON COLUMN "HIS_REPLY"."CREATE_DATE" IS '댓글올린날짜';
+COMMENT ON COLUMN "HIS_REPLY"."MODIFY_DATE" IS '댓글수정날짜';
+
+INSERT INTO HIS_REPLY VALUES(SEQ_HIS_RNO.NEXTVAL, 51, 1, '안녕하세요.', DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO HIS_REPLY VALUES(SEQ_HIS_RNO.NEXTVAL, 50, 1, '반갑습니다.', DEFAULT, DEFAULT, DEFAULT);
+
+
+BEGIN
+    FOR N IN 50..60
+    LOOP
+        INSERT INTO HIS_REPLY VALUES(SEQ_HIS_RNO.NEXTVAL, N, 1, '역사토론해요.', DEFAULT, DEFAULT, DEFAULT);
+        INSERT INTO HIS_REPLY VALUES(SEQ_HIS_RNO.NEXTVAL, N, 1, '역사토론해요.', DEFAULT, DEFAULT, DEFAULT);
+        INSERT INTO HIS_REPLY VALUES(SEQ_HIS_RNO.NEXTVAL, N, 1, '역사토론해요.', DEFAULT, DEFAULT, DEFAULT);
+    END LOOP;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN ROLLBACK;
+END;
+/
+
+COMMIT;
+SELECT * FROM HIS_REPLY;
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--------------------------------<HertiageReview>----------------------------
+--------------------------------------------------------------------------------
+--문화재 리뷰
+DROP TABLE HertiageReview CASCADE CONSTRAINTS;
+CREATE TABLE HertiageReview (
+	revNo		number	NOT NULL,
+	revContents	CLOB	NULL,
+	revDate		DATE DEFAULT SYSDATE,
+	uNo		number	NULL,
+    	no          	number null,
+    	STATUS      	VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN ('Y', 'N')),
+    	revDate_MODIFY DATE DEFAULT SYSDATE,
+    	PRIMARY KEY (revNo)
+);
+
+DROP SEQUENCE SEQ_revNo;
+CREATE SEQUENCE SEQ_revNo START WITH 1;
+
+--칼럼 설명
+--COMMENT ON COLUMN HertiageReview.revNo IS '문화재 리뷰번호';
+--COMMENT ON COLUMN HertiageReview.revContents IS '문화재 리뷰내용';
+--COMMENT ON COLUMN HertiageReview.revDate IS '문화재 리뷰작성날짜';
+--COMMENT ON COLUMN HertiageReview.uNo IS '회원번호(문화재 리뷰작성자)';
+--COMMENT ON COLUMN HertiageReview.no IS '문화재 고유키값';
+--COMMENT ON COLUMN HertiageReview.STATUS IS '상태값(Y/N)';
+--COMMENT ON COLUMN HertiageReview.HertiageReview_revDate_MODIFY IS '문화재 리뷰수정날짜';
+
+SELECT * FROM HertiageReview;
+
+INSERT INTO HertiageReview VALUES(SEQ_prevNo.NEXTVAL, '안녕하세요.', DEFAULT,1, 2, 'Y', DEFAULT);
+INSERT INTO HertiageReview VALUES(SEQ_prevNo.NEXTVAL, '반갑습니다.', DEFAULT,1, 4, 'Y', DEFAULT);
+INSERT INTO HertiageReview VALUES(SEQ_prevNo.NEXTVAL, '안녕.', DEFAULT,2, 2, 'Y', DEFAULT);
+INSERT INTO HertiageReview VALUES(SEQ_prevNo.NEXTVAL, '안녕하세요.', DEFAULT,1, 7, 'N', DEFAULT);
+INSERT INTO HertiageReview VALUES(SEQ_prevNo.NEXTVAL, '반갑습니다.', DEFAULT,2, 7, 'N', DEFAULT);
+INSERT INTO HertiageReview VALUES(SEQ_prevNo.NEXTVAL, '안녕.', DEFAULT,3, 2, 'N', DEFAULT);
+
+--<HertiageReview_DML>
+
+--1. 문화재에 달린 리뷰의 갯수를 가져오는 쿼리문 -> 문화재 고유번호, 리뷰갯수 
+SELECT HR.NO, COUNT(revNo) FROM HertiageReview HR group by no order by COUNT(revNo) desc;
+
+--2. 문화재에 달린 리플을 가져오는 쿼리 --> 출력내용 = 회원아이디, 문화재리뷰내용 , 리뷰작성날짜 
+SELECT U.uNo, U.uEmail , HR.no, HR.revNo, HR.revContents, HR.revDate
+FROM HertiageReview HR, USERINFO U ,HERITAGE H
+WHERE HR.uNo = U.uNo AND  HR.no = H.no
+AND HR.STATUS = 'Y' AND HR.no= 2 
+ORDER BY HR.revNo DESC;
+
+--3. 리플 쓰기 
+INSERT INTO HertiageReview VALUES(SEQ_revNo.NEXTVAL, 1 , DEFAULT, 2, 3, DEFAULT, DEFAULT);
+
+--4. 리뷰 수정
+UPDATE HertiageReview SET revNo=1,revContents="안녕하세요",uNo=1,MODIFY_DATE=SYSDATE WHERE NO=1;
+
+--5.  리뷰 삭제
+select * FROM HertiageReview ;
+DELETE HertiageReview WHERE revNo = 2;
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+-------------------------------< PalaceReview >------------------------------
+--------------------------------------------------------------------------------
+--궁궐.종묘 리뷰
+DROP TABLE PalaceReview CASCADE CONSTRAINTS;
+CREATE TABLE PalaceReview (
+	prevNo		number	NOT NULL,
+	prevContents	CLOB	NULL,
+	prevDate		DATE DEFAULT SYSDATE,
+	uNo		    number	NULL,
+    	seq_pj_ss   number null,
+    	STATUS      VARCHAR2(1) DEFAULT 'Y' CHECK (STATUS IN ('Y', 'N')),
+    	prevDate_MODIFY DATE DEFAULT SYSDATE,
+    	PRIMARY KEY (revNo)
+);
+
+DROP SEQUENCE SEQ_prevNo;
+CREATE SEQUENCE SEQ_prevNo START WITH 1;
+
+--칼럼 설명
+COMMENT ON COLUMN PalaceReview .prevNo IS '궁궐.종묘 리뷰번호';
+COMMENT ON COLUMN PalaceReview .prevContents IS '궁궐.종묘 리뷰내용';
+COMMENT ON COLUMN PalaceReview .prevDate IS '궁궐.종묘 리뷰작성날짜';
+COMMENT ON COLUMN PalaceReview .uNo IS '회원번호(궁궐.종묘 리뷰작성자)';
+COMMENT ON COLUMN PalaceReview .seq_pj_ss IS '궁궐.종묘 고유키값';
+COMMENT ON COLUMN PalaceReview .STATUS IS '상태값(Y/N)';
+COMMENT ON COLUMN PalaceReview .prevDate_MODIFY IS '궁궐.종묘 리뷰수정날짜';
+
+
+SELECT * FROM PalaceReview; 
+
+
+--<PalaceReview_DML>
+
+--1. 궁궐.종묘에 달린 리뷰의 갯수를 가져오는 쿼리문 -> 궁궐.종묘 고유번호, 리뷰갯수 
+SELECT PR.seq_pj_ss, COUNT(prevNo) FROM  PalaceReview PR group by seq_pj_ss order by COUNT(prevNo) desc;
+
+--2. 문화재에 달린 리플을 가져오는 쿼리 --> 출력내용 = 회원아이디, 문화재리뷰내용 , 리뷰작성날짜 
+SELECT U.uNo, U.uEmail , PR.seq_pj_ss, PR.prevNo, PR.prevContents, PR.prevDate
+FROM PalaceReview PR, USERINFO U ,Palace_Jongmyo_Sangse JS
+WHERE PR.uNo = U.uNo AND  PR.seq_pj_ss = JS.seq_pj_ss
+AND PR.STATUS = 'Y' AND PR.seq_pj_ss= 2 
+ORDER BY PR.prevNo DESC;
+
+--3. 리플 쓰기 
+INSERT INTO PalaceReview VALUES(SEQ_prevNo.NEXTVAL, 1 , DEFAULT, 2, 3, DEFAULT, DEFAULT);
+
+--4. 리뷰 수정
+UPDATE PalaceReview SET prevNo=1, prevContents="안녕하세요", uNo=1, MODIFY_DATE=SYSDATE WHERE NO=1;
+
+--5.  리뷰 삭제
+select * FROM PalaceReview ;
+DELETE PalaceReview WHERE prevNo = 2;
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+-----------------------------------< USER >-----------------------------------
+--------------------------------------------------------------------------------
+--회원정보 
+DROP TABLE USERINFO CASCADE CONSTRAINTS;
+CREATE TABLE USERINFO (
+	uNo	        NUMBER		    NOT NULL,         
+   	uEmail	        VARCHAR2(100)	NOT NULL,             
+	uPW	        VARCHAR2(100)	NULL,                    
+	uName	        VARCHAR2(100)	NULL,            
+	uPN	        VARCHAR2(100)	 DEFAULT '정보를 입력해주세요',                    
+	uAdr	        VARCHAR2(100)	DEFAULT '정보를 입력해주세요',                    
+	ORIGINAL_PHOTO VARCHAR2(1000) ,
+	RENAMED_PHOTO VARCHAR2(1000) ,
+    	introduce         VARCHAR2(3000) DEFAULT '정보를 입력해주세요',				 
+    	twt                 VARCHAR2(100) DEFAULT '정보를 입력해주세요',
+    	insta               VARCHAR2(100) DEFAULT '정보를 입력해주세요',
+    	facebook         VARCHAR2(100) DEFAULT '정보를 입력해주세요',
+    	STATUS           VARCHAR2(5)  DEFAULT 'Y' CHECK(STATUS IN('Y', 'N')),
+	PRIMARY KEY (uNo)
+);
+
+DROP SEQUENCE SEQ_UNO;
+CREATE SEQUENCE SEQ_UNO;
+
+SELECT * FROM USERINFO;
+
+INSERT INTO USERINFO VALUES(SEQ_UNO.NEXTVAL,'100@NAVER.COM', '1234','백길동', '010-1000-1000', '백길동주소', '백길동사진', '리네임사진', '나는야 대단한 백길동','트위터1','인스타1',DEFAULT, DEFAULT);
+INSERT INTO USERINFO VALUES(SEQ_UNO.NEXTVAL,'200@NAVER.COM', '1234','이백길동', '010-2222-1000', '이백길동주소', '이백길동사진', '리네임사진','백길동? 난 이백이다',DEFAULT,'인스타2','페북2', DEFAULT);
+INSERT INTO USERINFO VALUES(SEQ_UNO.NEXTVAL,'300@NAVER.COM', '1234','삼백길동', '010-3333-1000', '삼백길동주소', '삼백길동사진', '리네임사진','삼백밑으로 다 닥쳐','트위터3',DEFAULT,DEFAULT, DEFAULT);
+INSERT INTO USERINFO VALUES(SEQ_UNO.NEXTVAL,'400@NAVER.COM', '1234','사백길동', DEFAULT, DEFAULT,DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT);
+
+SELECT NVL(upn,'전화번호가 없습니다.') FROM USERINFO;
+
+
+------------------------------------------------------------------------------
+-----------------------------------<FAVORITE>-----------------------------
+------------------------------------------------------------------------------
+--문화재_즐겨찾기
+DROP TABLE hFavorite CASCADE CONSTRAINTS;
+CREATE TABLE hFavorite (
+	hfavNum	NUMBER     NOT NULL,
+	uNo	NUMBER     NOT NULL,
+	no	NUMBER	    NOT NULL,
+	PRIMARY KEY (hfavNum)
+);
+DROP SEQUENCE SEQ_hfavNum;
+CREATE SEQUENCE SEQ_hfavNum START WITH 1;
+
+-- 문화재찜 테스트 데이터
+DELETE FROM hFavorite WHERE uNo = 1 AND no = 1;
+INSERT INTO hFavorite VALUES(SEQ_hfavNum.NEXTVAL, 1, 1);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 1, 2);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 1, 3);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 1, 4);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 1, 5);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 2, 1);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 2, 3);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 2, 4);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 2, 5);
+insert into hFavorite VALUES(SEQ_hfavNum.nextval, 2, 2);
+
+SELECT * FROM hFavorite;
+
+--궁궐.종묘_즐겨찾기
+DROP TABLE pFavorite CASCADE CONSTRAINTS;
+CREATE TABLE pFavorite (
+	pfavNum	        number	NOT NULL,
+	uNo	        number	NOT NULL,
+	seq_pj_ss         number	NOT NULL,
+	PRIMARY KEY (pfavNum)
+);
+DROP SEQUENCE SEQ_pfavNum;
+CREATE SEQUENCE SEQ_pfavNum START WITH 1;
+
+SELECT * FROM pFavorite;
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+------------------------------------< STAMP >-------------------------------
+-------------------------------------------------------------------------------
+--나의 스탬프
+DROP TABLE MYSTAMP CASCADE CONSTRAINTS;
+CREATE TABLE MYSTAMP (
+	myStampNo	NUMBER	NOT NULL,
+	uNo		number	NOT NULL,
+	stampNo		number	NOT NULL,
+	PRIMARY KEY (myStampNo)
+);
+
+SELECT * FROM MYSTAMP;
+
+--스탬프 장소목록
+DROP TABLE AllStamp CASCADE CONSTRAINTS;
+CREATE TABLE AllStamp (
+	stampNo		number		NOT NULL,
+	theme		varchar(100)	NULL,
+	stampPlace	varchar(100)	NULL,
+	PRIMARY KEY (stampNo)
+);
+DROP SEQUENCE SEQ_stampNo;
+CREATE SEQUENCE SEQ_stampNo START WITH 1;
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+----------------------------------<SOUVENIER>-------------------------------
+--------------------------------------------------------------------------------
+
+-- 상품
+DROP TABLE SOUV_PRODUCT;
+CREATE TABLE SOUV_PRODUCT (
+	SOUV_PRO_NO	    NUMBER	NOT NULL     PRIMARY KEY,
+	SOUV_PRO_NAME	    VARCHAR2(50)	NOT NULL,
+	SOUV_PRO_PRICE	    NUMBER	NOT NULL,
+	SOUV_PRO_CATEGORY VARCHAR2(50)	NOT NULL,
+    	SOUV_PRO_URL        VARCHAR2(100)	NOT NULL
+);
+
+DROP SEQUENCE SOUV_PRO_NO;
+CREATE SEQUENCE SOUV_PRO_NO START WITH 1;
+
+select * from SOUV_PRODUCT;
+
+-- 상품 데이터
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '반가사유상 미니어처(83호)', 49000, '생활/데코', 'https://www.museumshop.or.kr/center/files/upload/20220405/20220405164836_ishyxcqo.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '일월오봉도 한지조명', 110000, '생활/데코', 'https://www.museumshop.or.kr/center/files/good/202206141130080696100.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '[조선의 승려 장인]약사불 보호등', 35000, '생활/데코', 'https://www.museumshop.or.kr/center/files/good/202112311557320239100.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '이조 연화당초 육각 악세사리함', 60000, '생활/데코', 'https://www.museumshop.or.kr/center/files/good/202206091804360546100.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '향기로 만나는 궁 (디퓨저)', 45000, '생활/데코', 'https://khmall.or.kr/web/product/extra/small/202109/7f6f066c90afdf0a892e9b291b711bf8.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '초충도 장우산', 36000, '패션/잡화', 'https://www.museumshop.or.kr/center/files/good/202205191720340404100.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, ' 일월오봉도 부채', 9500, '패션/잡화', 'https://www.khmall.or.kr/web/product/small/shop1_50a82de59064d70b280a59d64c02b837.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, ' 전통그림부채', 2700, '패션/잡화', 'https://www.khmall.or.kr/web/product/small/202102/50d26bfdf88f5d14497bcacd86a3d350.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '전통그림텀블러', 38500, '패션/잡화', 'https://shop-phinf.pstatic.net/20191215_189/1576349421263fwgt9_JPEG/4F5T1218.jpg?type=w860');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '[이건희 기증전]레디백', 29000, '패션/잡화', 'https://www.museumshop.or.kr/center/files/good/202204221952420669100.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '[이건희 기증전]휴대용 의자', 35000, '패션/잡화', 'https://www.museumshop.or.kr/center/files/good/202204270918390726100.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '경복궁 근정전 단청연필', 9900, '사무/문구', 'https://shop-phinf.pstatic.net/20190928_173/1569638236946Sa6xW_JPEG/IMG_0031.JPG?type=w860');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '민화 미니 노트(무지)', 1900, '사무/문구', 'https://www.museumshop.or.kr/center/files/good/202206021743140859100.jpg');
+insert into SOUV_PRODUCT VALUES(SOUV_PRO_NO.NEXTVAL, '[이건희 기증전]마스킹테이프(화조도)', 4500, '사무/문구', 'https://www.museumshop.or.kr/center/files/good/202204271610490246100.jpg');
+
+
+
+
+-- 장바구니
+DROP TABLE SOUV_CART;
+CREATE TABLE SOUV_CART (
+    	seqNo               	      NUMBER UNIQUE        NOT NULL,
+	SOUV_CART_NO	      VARCHAR2(20)	NOT NULL,
+	uNo	                  NUMBER		NOT NULL,
+	SOUV_PRO_NO	      NUMBER		NOT NULL,
+    	SOUV_PRO_NAME        VARCHAR2(100)	NOT NULL,
+	SOUV_PRO_PRICE         NUMBER		NOT NULL,
+   	SOUV_PRO_CATEGORY   VARCHAR2(100)         NOT NULL,
+    	SOUV_PRO_URL           VARCHAR2(100)	NOT NULL,
+    	BUY_STATUS               VARCHAR2(5)     DEFAULT 'N' CHECK (BUY_STATUS IN('Y', 'N')) NOT NULL,   -- Y : 결제완료 / N : 결제안함
+    	DELETE_STATUS           VARCHAR2(5)     DEFAULT 'N' CHECK (DELETE_STATUS IN('Y', 'N')) NOT NULL    -- Y : 장바구니 담김 / N : 삭제
+);
+
+DROP SEQUENCE seqNo;
+CREATE SEQUENCE seqNo START WITH 1;
+
+
+-- 장바구니 데이터
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),1,2,'반가사유상 미니어처(83호)', 49000, '생활/데코', 'https://www.museumshop.or.kr/center/files/good/202202091748300291100.jpg','N', 'N');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),1,5,'일월오봉도 한지조명', 110000, '생활/데코', 'https://www.museumshop.or.kr/center/files/good/202206141130080696100.jpg','N', 'N');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),1,6,'경복궁 근정전 단청연필', 9900, '사무/문구', 'https://shop-phinf.pstatic.net/20190928_173/1569638236946Sa6xW_JPEG/IMG_0031.JPG?type=w860','Y', 'Y');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),1,3,'이조 연화당초 육각 악세사리함', 60000, '생활/데코', 'https://www.museumshop.or.kr/center/files/good/202206091804360546100.jpg','N', 'N');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),1,4,'향기로 만나는 궁 (디퓨저)', 45000, '생활/데코', 'https://khmall.or.kr/web/product/extra/small/202109/7f6f066c90afdf0a892e9b291b711bf8.jpg','N', 'N');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),2,1,'민화 미니 노트(무지)', 1900, '사무/문구', 'https://www.museumshop.or.kr/center/files/good/202206021743140859100.jpg','Y', 'Y');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),2,3,'일월오봉도 부채', 9500, '패션/잡화', 'https://www.khmall.or.kr/web/product/small/shop1_50a82de59064d70b280a59d64c02b837.jpg','N', 'N');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),2,4,'전통그림부채', 2700, '패션/잡화', 'https://www.khmall.or.kr/web/product/small/202102/50d26bfdf88f5d14497bcacd86a3d350.jpg','N', 'N');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),3,1,'[조선의 승려 장인]약사불 보호등', 35000, '생활/데코', 'https://www.museumshop.or.kr/center/files/good/202112311557320239100.jpg','Y', 'Y');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),3,2,'초충도 장우산', 36000, '패션/잡화', 'https://www.museumshop.or.kr/center/files/good/202205191720340404100.jpg','N', 'N');
+INSERT INTO SOUV_CART VALUES(seqNo.NEXTVAL, to_char(SYSDATE,'YYYYMMDDHH24'),3,2,'[이건희 기증전]마스킹테이프(화조도)', 4500, '사무/문구', 'https://www.museumshop.or.kr/center/files/good/202204271610490246100.jpg',DEFAULT, DEFAULT);
+
+select * from SOUV_CART;
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+COMMIT;
+--ROLLBACK;
+
