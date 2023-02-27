@@ -129,7 +129,7 @@
 
 ## 🔑 ERD 
 
-![erd](https://cdn.discordapp.com/attachments/457223932244656128/1026447296243695697/unknown.png)
+![SEMI_PROJECT_ERD_2](https://user-images.githubusercontent.com/110010716/221627739-ac0d4232-2d0a-4226-bdf0-71a31010f9af.png)
 
 
 <br>
