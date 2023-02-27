@@ -1,5 +1,5 @@
 
-# :footprints:[사뿐사뿐] - 문화재 사이트:footprints:
+# :footprints:[사뿐사뿐] - 문화재 정보 사이트:footprints:
 
 
 ## :running_woman: 사뿐사뿐 소개 | About Us
