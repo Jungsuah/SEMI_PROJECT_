@@ -1,12 +1,13 @@
 
 # :footprints:[사뿐사뿐] - 문화재 정보 사이트:footprints:
+<p>
+<p>
 
 
 
 
 
-
-### 다양한 문화유산 및 문화 일정에 관한 정보를 한눈에!
+### :bulb: 다양한 문화유산 및 문화 일정에 관한 정보를 한눈에!
 ![KakaoTalk_20221003_034649228](https://user-images.githubusercontent.com/109055420/193470896-90e12165-8d97-4437-becd-624c4b39415a.png)
 
 ## :running_woman: 사뿐사뿐 | About Us
