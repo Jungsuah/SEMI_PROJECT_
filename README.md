@@ -9,7 +9,8 @@
 
 
 ### :bulb: 다양한 문화유산 및 문화 일정에 관한 정보를 한눈에!
-![KakaoTalk_20221003_034649228](https://user-images.githubusercontent.com/109055420/193470896-90e12165-8d97-4437-becd-624c4b39415a.png)
+![SEMI_PROJECT_사뿐사뿐 pdf_1](https://user-images.githubusercontent.com/110010716/221620228-998682fa-87b6-4325-ace4-9254d18121b0.png)
+
 
 ## :running_woman: 사뿐사뿐 | About Us
 온라인으로 수많은 인맥을 형성할 수 있지만, 실제로 만날 친구는 드문 시대!<br>
