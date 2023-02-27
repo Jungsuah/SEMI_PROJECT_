@@ -11,13 +11,13 @@
 
 
 ## :running_woman: 사뿐사뿐 | About Us
-     ![image](https://user-images.githubusercontent.com/110010716/221626536-82c4d5d7-6f03-493d-89b7-cbf0b36d034b.png)
 👉문화유산에 대한 관심 부족으로 각 지역별 특색있는 문화유산이 대중의 관심에서 멀어진 시대!<br>
 👉전국에 산재하고 있는 문화재 및 문화일정에 대한 정보를 종합적으로 열람할 수 있게하고<br>
 👉사용자 간 커뮤니티를 활성화하여 문화유산을 쉽게 배우고 즐길수 있는 여건을 조성하고자 합니다.<br>
 <p>
 <p>
-
+## 
+![image](https://user-images.githubusercontent.com/110010716/221626536-82c4d5d7-6f03-493d-89b7-cbf0b36d034b.png)
 
 ### :movie_camera:구현 동영상 및 PPT | Google Drive [바로가기](https://drive.google.com/drive/folders/1RdLfbwmSQiJUSqqcsab5JzN1wkyX2W7k?usp=sharing)
 
