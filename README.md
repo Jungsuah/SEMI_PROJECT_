@@ -17,8 +17,8 @@
 <p>
 <p>
 
-###  구현동영상 보기 | Website  [포도알 바로가기](https://podoal.net)
 
+###  구현동영상 보기 | Google Drive [바로가기](https://drive.google.com/drive/folders/1RdLfbwmSQiJUSqqcsab5JzN1wkyX2W7k?usp=sharing)
 
 <br>
 
