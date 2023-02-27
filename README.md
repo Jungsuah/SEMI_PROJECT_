@@ -129,7 +129,7 @@
 
 ## 🔑 ERD 
 
-![SEMI_PROJECT_ERD_2](https://user-images.githubusercontent.com/110010716/221627739-ac0d4232-2d0a-4226-bdf0-71a31010f9af.png)
+![image](https://user-images.githubusercontent.com/110010716/221628382-92f235c4-8dee-4d9e-932e-9d8dadb979dc.png)
 
 
 <br>
