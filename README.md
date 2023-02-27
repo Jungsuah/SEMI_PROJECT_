@@ -63,7 +63,7 @@
 ![image](https://user-images.githubusercontent.com/110010716/221635450-09d8d5d0-2c44-4e70-a215-85c744c7cdfc.png)
   <br>
   <br>
-  <br>
+
 ## ⚔ 주요 기능 | Main Function
 - 문화재 검색 (키워드, 지역, 지정연도, 시대, 문화재 유형분류별 필터링 기능)
 - 문화재 상세 조회 (요약 정보, 사진, 동영상 조회 / 찜하기 및 리뷰 작성)
