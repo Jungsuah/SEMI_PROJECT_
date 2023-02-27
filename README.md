@@ -1,6 +1,6 @@
 
 # :footprints:[사뿐사뿐] - 문화재 정보 사이트:footprints:
-<br>
+
 <p>
 <p>
 
