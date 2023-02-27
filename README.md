@@ -51,7 +51,13 @@
 
 
 ## 🛠 아키텍쳐 | Architecture
-
+- 운영체제 : Window OS<br>
+- 개발 툴 : Eclipse, Apache Tomcat 8.5, Oracle SQL Developer, Visual Studio code<br>
+- 개발 언어 : Java , HTML5, CSS3, JavaScript, jQuery, SQL, JSP, Servlet, Ajax, Json, Gson<br>
+- 소스 제어 관리 : GitHub<br>
+- 협업 툴 : Slack, Discode, Zira<br>
+- 프로토타이핑 툴 : ERD Cloud<br>
+- Open API : Kakao API, 문화재청 API<br>
 
 
 ## ⚔ 주요 기능 | Main Function
