@@ -59,10 +59,7 @@
 - 프로토타이핑 툴 : ERD Cloud<br>
 - Open API : Kakao API, 문화재청 API<br>
   
-<br>
-<br>
-![image](https://user-images.githubusercontent.com/110010716/221633481-ebd87742-afab-452d-8a55-5689d29fcd6b.png)
-<br>
+![image](https://user-images.githubusercontent.com/110010716/221635450-09d8d5d0-2c44-4e70-a215-85c744c7cdfc.png)
 
 ## ⚔ 주요 기능 | Main Function
 - 문화재 검색 (키워드, 지역, 지정연도, 시대, 문화재 유형분류별 필터링 기능)
