@@ -18,7 +18,7 @@
 <p>
 
 
-### :movie_camera:구현동영상 보기 | Google Drive [바로가기](https://drive.google.com/drive/folders/1RdLfbwmSQiJUSqqcsab5JzN1wkyX2W7k?usp=sharing)
+### :movie_camera:구현 동영상 및 PPT| Google Drive [바로가기](https://drive.google.com/drive/folders/1RdLfbwmSQiJUSqqcsab5JzN1wkyX2W7k?usp=sharing)
 
 <br>
 
