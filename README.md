@@ -51,7 +51,7 @@
 
 
 ## 🛠 아키텍쳐 | Architecture
-![KakaoTalk_20221003_032628588](https://cdn.discordapp.com/attachments/457223932244656128/1026435122318290994/Architecture.png)
+![image](https://user-images.githubusercontent.com/110010716/221626536-82c4d5d7-6f03-493d-89b7-cbf0b36d034b.png)
 
 
 ## ⚔ 주요 기능 | Main Function
