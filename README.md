@@ -8,6 +8,7 @@
 
 ### :bulb: 다양한 문화유산 및 문화 일정에 관한 정보를 한눈에!
 ![SEMI_PROJECT_사뿐사뿐 pdf_1](https://user-images.githubusercontent.com/110010716/221620228-998682fa-87b6-4325-ace4-9254d18121b0.png)
+![image](https://user-images.githubusercontent.com/110010716/221621192-e17c8b76-5e07-42fe-bec7-612bd796ac89.png)
 
 
 ## :running_woman: 사뿐사뿐 | About Us
