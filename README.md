@@ -17,7 +17,7 @@
 <p>
 <p>
 
-### 🌎 웹사이트 | Website  [포도알 바로가기](https://podoal.net)
+###  구현동영상 보기 | Website  [포도알 바로가기](https://podoal.net)
 
 
 <br>
