@@ -99,7 +99,7 @@
 
 <br>
 
-## 🎨 기능 구현
+## :tv: 기능 구현
 
 ### <a href="https://github.com/kyungseopk1m/project-semi/tree/master/00_K_Heritage/src/main/java/main">메인페이지 기능 소개</a>
 
