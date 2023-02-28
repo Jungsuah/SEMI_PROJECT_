@@ -55,6 +55,11 @@
 ![image](https://user-images.githubusercontent.com/110010716/221781853-31f0b14e-098e-4aa7-a3a5-07dcd33af443.png)
   <br>
   <br>
+  
+## 🛠 UI 흐름도 | UI Flow
+![image](https://user-images.githubusercontent.com/110010716/221781853-31f0b14e-098e-4aa7-a3a5-07dcd33af443.png)
+  <br>
+  <br>
 
 ## ⚔ 주요 기능 | Main Function
 ### 
