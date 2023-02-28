@@ -28,7 +28,7 @@
 3. [UI 흐름도](#-UI-흐름도--UI-Flow)
 4. [주요 기능](#-주요-기능--Main-Function)
 5. [개발환경](#-개발환경--development-environment)
-6. [ERD](#-erd)
+6. [ERD](#-erd--ERD)
 7. [기능 구현](#-기능-구현)
 
 
