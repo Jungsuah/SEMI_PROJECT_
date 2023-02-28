@@ -101,7 +101,7 @@
 
 ## :tv: 기능 구현
 
-### <a href="https://github.com/kyungseopk1m/project-semi/tree/master/00_K_Heritage/src/main/java/main">메인페이지 기능 소개</a>
+### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/tree/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo">메인페이지 기능 소개</a>
 
 ![main1](https://user-images.githubusercontent.com/101553623/221747056-3553fb73-32e9-46e3-8ce5-d8f81990b923.gif)
 <br>
