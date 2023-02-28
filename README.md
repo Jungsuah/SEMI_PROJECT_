@@ -92,7 +92,7 @@
 
 
 
-## 🔑 ERD 
+## 🔑 ERD | <a href="https://github.com/Jungsuah/SEMI_PROJECT_/commit/87cb735b2fd1da0583f5f9cf440c47543204a569">(photo)</a>
 
 ![image](https://user-images.githubusercontent.com/110010716/221628382-92f235c4-8dee-4d9e-932e-9d8dadb979dc.png)
 
