@@ -23,7 +23,7 @@
 <br>
 
 ## 🔭목차 | Contents
-1. [개발기간](#-개발기간--project-period)
+1. [개발 일정](#-개발기간--project-period)
 2. [아키텍쳐](#-아키텍쳐--architecture)
 3. [UI 흐름도](#-ui-흐름도)
 4. [주요 기능](#-주요-기능--Main-Function)
