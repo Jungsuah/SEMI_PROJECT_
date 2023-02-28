@@ -105,8 +105,8 @@
 
 ![main1](https://user-images.githubusercontent.com/101553623/221747056-3553fb73-32e9-46e3-8ce5-d8f81990b923.gif)
 <br>
-
-#### 👉 다양한 문화재를 볼 수 있는 오늘의 문화재는 랜덤 메서드를 이용해 기능 구현 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
+#### 👉 상단 검색바에서 키워드로 검색 가능 
+#### 👉 인기 문화 명소는 회원들의 좋아요 갯수를 활용하여 기능 구현 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
 #### 👉 클릭 시 해당 문화재의 상세 페이지로 이동 <br><br>
 <br>
 <br>
