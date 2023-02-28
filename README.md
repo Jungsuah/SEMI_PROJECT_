@@ -52,16 +52,7 @@
 
 
 ## 🛠 아키텍쳐 | Architecture
-- 운영체제 : Window OS<br>
-- 개발 툴 : Eclipse, Apache Tomcat 8.5, Oracle SQL Developer, Visual Studio code<br>
-- 개발 언어 : Java , HTML5, CSS3, JavaScript, jQuery, SQL, JSP, Servlet, Ajax, Json, Gson<br>
-- 소스 제어 관리 : GitHub<br>
-- 협업 툴 : Slack, Discode, Zira<br>
-- 프로토타이핑 툴 : ERD Cloud<br>
-- Open API : Kakao API, 문화재청 API<br>
-  <br>
-  <br>
-![image](https://user-images.githubusercontent.com/110010716/221635450-09d8d5d0-2c44-4e70-a215-85c744c7cdfc.png)
+![image](https://user-images.githubusercontent.com/110010716/221781853-31f0b14e-098e-4aa7-a3a5-07dcd33af443.png)
   <br>
   <br>
 
