@@ -90,32 +90,7 @@
   <br>
 
 
-## 🎨 라이브러리 | Library
 
-     "@fortawesome/react-fontawesome": "^0.2.0",
-     "axios": "^0.27.2",
-     "file-loader": "^6.2.0",
-     "json-server": "^0.17.0",
-     "moment": "^2.29.4",
-     "react": "^18.2.0",
-     "react-dom": "^18.2.0",
-     "react-hook-form": "^7.34.2",
-     "react-intersection-observer": "^9.4.0",
-     "react-query": "^3.39.2",
-     "react-router-dom": "^6.3.0",
-     "react-scripts": "5.0.1",
-     "react-select": "^5.4.0",
-     "react-toastify": "^9.0.8",
-     "recoil": "^0.7.5",
-     "styled-components": "^5.3.5",
-     "sweetalert2": "^11.4.33",
-     "sweetalert2-react-content": "^5.0.3",
-     "swiper": "^8.3.2",
-     
-
-    
-
-<br>
 
 ## 🔑 ERD 
 
