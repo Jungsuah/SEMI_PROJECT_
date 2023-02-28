@@ -25,10 +25,11 @@
 ## 🔭목차 | Contents
 1. [개발기간 | Project Period](#-개발기간--project-period)
 2. [아키텍쳐 | Architecture](#-아키텍쳐--architecture)
-3. [주요 기능 | Main Function](#-주요-기능--Main-Function)
-4. [개발환경 | Development Enviornment](#-개발환경--development-environment)
-5. [라이브러리 | Library](#-라이브러리--library)
+3. [UI 흐름도 | UI Flow](#-ui-흐름도)
+4. [주요 기능 | Main Function](#-주요-기능--Main-Function)
+5. [개발환경 | Development Enviornment](#-개발환경--development-environment)
 6. [ERD](#-erd)
+7. [기능 구현](#-기능-구현)
 
 
 <br>
