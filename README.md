@@ -106,17 +106,17 @@
 ![main1](https://user-images.githubusercontent.com/101553623/221747056-3553fb73-32e9-46e3-8ce5-d8f81990b923.gif)
 <br>
 #### 👉 상단 검색바에서 키워드로 검색 가능 
-#### 👉 인기 문화 명소는 회원들의 좋아요 갯수를 활용하여 기능 구현 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
-#### 👉 클릭 시 해당 문화재의 상세 페이지로 이동 <br><br>
+#### 👉 행사일정 정보 조회 가능, 커뮤니티 글 최신순으로 조회, 사뿐코스, 사뿐몰 인기 상품 조회
+#### 👉 클릭 시 해당 기능의 상세 페이지로 이동 <br><br>
 <br>
 <br>
 
 ![main2](https://user-images.githubusercontent.com/101553623/221747721-bbd3eb28-9226-4251-b0cb-728d30204c19.gif)
 <br>
 
-#### 👉 이달의 인기 박물관은 박물관 상세페이지의 조회수를 활용 <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/webapp/views/main/main.jsp">(URL)</a>
-#### 👉 박물관 페이지에 접속하면 조회수가 자동으로 오르고,
-#### 👉 상위 조회수 2곳의 박물관을 메인 페이지에서 확인 가능 <br><br>
+#### 👉 인기 문화 명소는 회원들의 좋아요 갯수를 활용하여 기능 구현 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
+#### 👉 로그인한 사용자가 좋아요를 누르면, 좋아요 개수가 자동으로 오르고,
+#### 👉 상위 조회수 10곳의 문화재를 메인 페이지에서 확인 가능 <br><br>
 <br>
 <br>
 
