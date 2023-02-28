@@ -99,7 +99,75 @@
 
 <br>
 
+## 🎨 기능 구현
 
+### <a href="https://github.com/kyungseopk1m/project-semi/tree/master/00_K_Heritage/src/main/java/main">메인페이지 기능 소개</a>
+
+![main1](https://user-images.githubusercontent.com/101553623/221747056-3553fb73-32e9-46e3-8ce5-d8f81990b923.gif)
+<br>
+
+#### 👉 다양한 문화재를 볼 수 있는 오늘의 문화재는 랜덤 메서드를 이용해 기능 구현 <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/java/main/MainDao.java">(URL)</a>
+#### 👉 클릭 시 해당 문화재의 상세 페이지로 이동 <br><br>
+<br>
+<br>
+
+![main2](https://user-images.githubusercontent.com/101553623/221747721-bbd3eb28-9226-4251-b0cb-728d30204c19.gif)
+<br>
+
+#### 👉 이달의 인기 박물관은 박물관 상세페이지의 조회수를 활용 <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/webapp/views/main/main.jsp">(URL)</a>
+#### 👉 박물관 페이지에 접속하면 조회수가 자동으로 오르고,
+#### 👉 상위 조회수 2곳의 박물관을 메인 페이지에서 확인 가능 <br><br>
+<br>
+<br>
+
+### <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/java/cultureController/CultureServlet.java">문화재 검색 기능 소개</a>
+<br>
+
+![search1](https://user-images.githubusercontent.com/101553623/221748602-eb4129c8-b825-43e0-89fb-d42d9cac7914.gif)
+<br>
+
+![search2](https://user-images.githubusercontent.com/101553623/221749046-b7958642-22fa-42df-aadc-55c7e966b0d2.gif)
+<br>
+
+#### 👉 상단 메뉴를 통한 문화재 검색 페이지 이동 시 전체 문화재 조회 
+#### 👉 한 페이지 당 12개의 문화재 조회 페이징 처리 (대표이미지, 종목 유형, 문화재명)
+#### 👉 조회된 문화재 클릭 시 상세 페이지로 이동
+#### 👉 검색 조건 (4중 검색 가능)
+- 문화재명 : 캠핑장 이름에 포함된 문자 있으면 조회 (선택)
+- 지정 종목 : 4가지 항목 중 하나라도 포함된 문화재면 조회 (미선택 or 단일 선택 가능)
+- 시대별 : 9가지 항목 중 해당되는 문화재로 조회 (미선택 or 단일 선택 가능)
+- 지역별 : 6가지 항목 중 해당되는 문화재로 조회 (미선택 or 단일 선택 가능)<br><br>
+<br>
+<br>
+
+### <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/webapp/views/culture/cul_det.jsp">문화재 상세 기능 소개</a>
+<br>
+
+![detail1](https://user-images.githubusercontent.com/101553623/221749389-65e90818-a3d1-4034-8c7e-f38ebb470808.gif)
+<br>
+
+#### 👉 분류, 시대, 소재지 등 문화재의 자세한 데이터를 확인
+#### 👉 하단에서는 원본 크기의 문화재 이미지를 확인
+<br>
+<br>
+<br>
+  
+![detail2](https://user-images.githubusercontent.com/101553623/221750492-8035884e-2611-455c-b928-ada5cb7a6a25.gif)
+<br>
+  
+#### 👉 우측에서는 지도와 주변 문화재, 주변 박물관 표시 기능 구현
+#### 👉 주변 문화재와 주변 박물관은 상세 페이지의 경도와 위도 데이터를 활용 <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/java/culture/CultureDIDao.java">(URL)</a>
+#### 👉 클릭 시 해당 문화재/박물관 상세 페이지로 이동 <br><br>
+<br>
+<br>
+<br>
+
+![detail3](https://user-images.githubusercontent.com/101553623/221750839-e0727128-4c87-4dc9-9842-1198e34ca43b.gif)
+<br>
+
+#### 👉 지도는 카카오 API를 사용하여 구현하였고, 해당 문화재의 위치를 확인 <br><br>
+<br>
+<br>
 
 
 
