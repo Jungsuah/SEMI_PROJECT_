@@ -24,9 +24,9 @@
 
 ## 🔭목차 | Contents
 1. [개발기간 | Project Period](#-개발기간--project-period)
-2. [아키텍쳐 | Architecture](#-아키텍쳐--architecture)
+2. [개발환경 | Development Enviornment](#-개발환경--development-environment)
 3. [주요 기능 | Main Function](#-주요-기능--Main-Function)
-4. [개발환경 | Development Enviornment](#-개발환경--development-environment)
+4. [아키텍쳐 | Architecture](#-아키텍쳐--architecture)
 5. [라이브러리 | Library](#-라이브러리--library)
 6. [ERD](#-erd)
 7. [ 팀원 | TEAM](#-팀원--team)
@@ -50,7 +50,7 @@
 
 
 
-## 🛠 아키텍쳐 | Architecture
+## ⛏ 개발환경 | Development Environment
 - 운영체제 : Window OS<br>
 - 개발 툴 : Eclipse, Apache Tomcat 8.5, Oracle SQL Developer, Visual Studio code<br>
 - 개발 언어 : Java , HTML5, CSS3, JavaScript, jQuery, SQL, JSP, Servlet, Ajax, Json, Gson<br>
@@ -77,7 +77,7 @@
 - 마이페이지 (회원 정보 수정 및 탈퇴 / 찜, 리뷰, 장바구니, 구매이력 조회)<br>
 
 
-## ⛏ 개발환경 | Development Environment
+## 🛠 아키텍쳐 | Architecture 
 
 <img  src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img  src="https://img.shields.io/badge/react query-FF4154?style=for-the-badge&logo=reactquery&logoColor=black">
 <img  src="https://img.shields.io/badge/Recoil-0088CC?style=for-the-badge&logo=recoil&logoColor=white">
