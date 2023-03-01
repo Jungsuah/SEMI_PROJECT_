@@ -100,7 +100,7 @@
 <br>
 #### 👉 상단 검색바에서 키워드로 검색 가능 
 #### 👉 행사일정 정보 조회, 커뮤니티 글 최신순 조회, 사뿐코스, 사뿐몰 인기 상품 조회 가능
-<p>
+
 ![main2](https://user-images.githubusercontent.com/110010716/222136261-1566824f-edcc-4850-849b-e135b8ef5db3.gif)
 <br>
 #### 👉 더보기 클릭 시 해당 기능 페이지로 이동 <br><br>
@@ -108,8 +108,9 @@
 <br>
 
 
-<br>
 
+![main3](https://user-images.githubusercontent.com/110010716/222139939-59f83898-ae07-4f0f-8c4f-972563992b5e.gif)
+<br>
 #### 👉 인기 문화 명소는 회원들의 좋아요 갯수를 활용하여 기능 구현 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
 #### 👉 로그인한 사용자가 좋아요를 누르면, 좋아요 개수가 자동으로 오르고,
 #### 👉 상위 조회수 10곳의 문화재를 메인 페이지에서 확인 가능 <br><br>
@@ -119,10 +120,10 @@
 ### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">문화재 검색 기능 소개</a>
 <br>
 
-![search1](https://user-images.githubusercontent.com/101553623/221748602-eb4129c8-b825-43e0-89fb-d42d9cac7914.gif)
+![search1]
 <br>
 
-![search2](https://user-images.githubusercontent.com/101553623/221749046-b7958642-22fa-42df-aadc-55c7e966b0d2.gif)
+![search2]
 <br>
 
 #### 👉 상단 메뉴를 통한 문화재 검색 페이지 이동 시 전체 문화재 조회 
