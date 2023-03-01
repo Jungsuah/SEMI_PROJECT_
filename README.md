@@ -122,7 +122,7 @@
 ![search1](https://user-images.githubusercontent.com/110010716/222142847-14854b55-bdb2-4895-b447-879d917a0ba4.gif)
 <br>
 
-![search2]
+![search2](https://user-images.githubusercontent.com/110010716/222144092-ac1bf63d-92f4-4520-8a10-a76978ac36a3.gif)
 <br>
 
 #### 👉 상단 메뉴를 통한 문화재 검색 페이지 이동 시 전체 문화재 조회 
