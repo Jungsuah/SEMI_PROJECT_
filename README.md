@@ -1,11 +1,12 @@
 
 # :footprints:[사뿐사뿐] - 문화재 정보 사이트:footprints:
-<hr>
+
 
 
 
 
 ### :bulb: 다양한 문화유산 및 문화 일정에 관한 정보를 한눈에!
+<hr>
 ![SEMI_PROJECT_사뿐사뿐 pdf_1](https://user-images.githubusercontent.com/110010716/221620228-998682fa-87b6-4325-ace4-9254d18121b0.png)
 
 
