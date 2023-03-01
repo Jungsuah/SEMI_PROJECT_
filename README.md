@@ -1,5 +1,5 @@
 # :footprints:[사뿐사뿐]
-프로젝트 '사뿐사뿐 - 문화재 통합정보포털'
+<b>프로젝트 '사뿐사뿐 - 문화재 통합정보포털'</b>
 <hr>
 
 ### :bulb:  다양한 문화유산 및 문화 일정에 관한 정보를 한곳에서 확인하세요!
@@ -26,7 +26,6 @@
 5. [개발환경](#-개발환경--development-environment)
 6. [ERD](#-erd--ERD)
 7. [기능 구현](#-기능-구현)
-
 
 <br>
 
@@ -91,6 +90,7 @@
 ![image](https://user-images.githubusercontent.com/110010716/221628382-92f235c4-8dee-4d9e-932e-9d8dadb979dc.png)
 
 <br>
+
 
 ## :tv: 기능 구현
 
