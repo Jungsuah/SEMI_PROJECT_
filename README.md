@@ -99,8 +99,8 @@
 ![제목 없는 동영상 - Clipchamp로 제작 (1)](https://user-images.githubusercontent.com/110010716/222113612-2851d10e-c4ac-4db9-a8e5-c6ecfa06907d.gif)
 <br>
 #### 👉 상단 검색바에서 키워드로 검색 가능 
-#### 👉 행사일정 정보 조회, 커뮤니티 글 최신순 조회, 사뿐코스, 사뿐몰 인기 상품 조회
-#### 👉 클릭 시 해당 기능의 상세 페이지로 이동 <br><br>
+#### 👉 행사일정 정보 조회, 커뮤니티 글 최신순 조회, 사뿐코스, 사뿐몰 인기 상품 조회 가능
+#### 👉 더보기 클릭 시 해당 기능 페이지로 이동 <br><br>
 <br>
 <br>
 
@@ -113,7 +113,7 @@
 <br>
 <br>
 
-### <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/java/cultureController/CultureServlet.java">문화재 검색 기능 소개</a>
+### <a href="[https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/java/cultureController/CultureServlet.java](https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller/HeritageListServlet.java)">문화재 검색 기능 소개</a>
 <br>
 
 ![search1](https://user-images.githubusercontent.com/101553623/221748602-eb4129c8-b825-43e0-89fb-d42d9cac7914.gif)
@@ -123,19 +123,20 @@
 <br>
 
 #### 👉 상단 메뉴를 통한 문화재 검색 페이지 이동 시 전체 문화재 조회 
-#### 👉 한 페이지 당 9개의 문화재 조회 페이징 처리 (대표이미지, 위치, 문화재명, 요약설명)
+#### 👉 한 페이지 당 9개의 문화재 조회 페이징 처리 
+#### 👉 검색된 항목 (대표이미지, 위치, 문화재명, 요약설명, 찜 개수) 확인 가능
 #### 👉 조회된 문화재 클릭 시 상세 페이지로 이동
-#### 👉 체크박스를 활용한 검색 (5중 조건 검색 가능)
-- 문화재명 : 문화재 이름에 포함된 문자 있으면 조회 (선택)
+#### 👉 키워드와 체크박스를 활용한 5중 조건 검색 (키워드, 지역, 지정연도, 시대, 유형 분류)  <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">SQL문</a>
+- 키워드 : 문화재 이름에 포함된 문자 있으면 조회 (선택)
 - 지역 : 16가지 항목 중 하나라도 포함된 문화재면 조회 (미선택 or 중복 선택 가능)
 - 지정연도 : 스크롤로 지정한 연도 범위에 포함된 문화재면 조회 (미선택 or 단일 선택 가능)
 - 시대 : 17가지 항목 중 해당되는 문화재로 조회 (미선택 or 중복 선택 가능)
-- 유형 분류별 : 7가지 항목 중 해당되는 문화재로 조회 (미선택 or 중복 선택 가능)
+- 유형 분류 : 7가지 항목 중 해당되는 문화재로 조회 (미선택 or 중복 선택 가능)
 - 전체 체크시 이전 선택 항목 사라지고 전체 선택으로 변경
 <br>
 <br>
 
-### <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/webapp/views/culture/cul_det.jsp">문화재 상세 기능 소개</a>
+### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller/HeritageDetailServlet.java">문화재 상세 기능 소개</a>
 <br>
 
 ![detail1](https://user-images.githubusercontent.com/101553623/221749389-65e90818-a3d1-4034-8c7e-f38ebb470808.gif)
