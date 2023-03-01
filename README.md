@@ -142,7 +142,7 @@
 ### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller/HeritageDetailServlet.java">문화재 상세 기능 소개</a>
 <br>
 
-![detail1](https://user-images.githubusercontent.com/101553623/221749389-65e90818-a3d1-4034-8c7e-f38ebb470808.gif)
+![detail1](https://user-images.githubusercontent.com/110010716/222152309-80dc4c3a-cc25-44df-93cc-9e5354d39517.gif)
 <br>
 
 #### 👉 분류, 시대, 소재지 등 문화재의 자세한 데이터를 확인
@@ -151,7 +151,7 @@
 <br>
 <br>
   
-![detail2](https://user-images.githubusercontent.com/101553623/221750492-8035884e-2611-455c-b928-ada5cb7a6a25.gif)
+![detail2](https://user-images.githubusercontent.com/110010716/222152296-49c6b9fc-bde7-45aa-9259-2c56921c6c7b.gif)
 <br>
   
 #### 👉 우측에서는 지도에 문화재 위치를 좌표로 구현 (경도와 위도 데이터 사용)
@@ -161,7 +161,8 @@
 <br>
 <br>
 
-![detail3](https://user-images.githubusercontent.com/101553623/221750839-e0727128-4c87-4dc9-9842-1198e34ca43b.gif)
+![detail3](https://user-images.githubusercontent.com/110010716/222152150-10fcb8b0-ef1f-46e8-a9e2-918af5880b41.gif)
+
 <br>
 
 #### 👉 하단에서 리뷰 작성 기능<a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller/HertiageReviewWriteServlet.java"> (URL)</a>
