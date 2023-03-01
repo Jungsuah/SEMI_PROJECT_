@@ -94,7 +94,7 @@
 
 ## :tv: 기능 구현
 
-### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/tree/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo">메인페이지 기능 소개</a>
+### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/tree/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller">메인페이지 기능 소개</a>
 
 ![제목 없는 동영상 - Clipchamp로 제작 (1)](https://user-images.githubusercontent.com/110010716/222113612-2851d10e-c4ac-4db9-a8e5-c6ecfa06907d.gif)
 <br>
