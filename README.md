@@ -113,7 +113,7 @@
 <br>
 <br>
 
-### <a href="https://github.com/kyungseopk1m/project-semi/blob/master/00_K_Heritage/src/main/java/cultureController/CultureServlet.java](https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller/HeritageListServlet.java">문화재 검색 기능 소개</a>
+### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">문화재 검색 기능 소개</a>
 <br>
 
 ![search1](https://user-images.githubusercontent.com/101553623/221748602-eb4129c8-b825-43e0-89fb-d42d9cac7914.gif)
