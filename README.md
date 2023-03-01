@@ -168,7 +168,7 @@
 <br>
 
 ### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/event/controller/FestivalServlet.java">월별 행사일정 페이지 기능 소개</a>
-<br>
+
 ![detail1](https://user-images.githubusercontent.com/101553623/221749389-65e90818-a3d1-4034-8c7e-f38ebb470808.gif)
 <br>
 
