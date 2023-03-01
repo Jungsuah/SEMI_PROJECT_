@@ -92,7 +92,7 @@
 <br>
 
 
-## :tv: 기능 구현
+## :tv:기능 구현
 
 ### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/tree/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller">메인페이지 기능 소개</a>
 
@@ -172,8 +172,9 @@
 ![detail1](https://user-images.githubusercontent.com/101553623/221749389-65e90818-a3d1-4034-8c7e-f38ebb470808.gif)
 <br>
 
-#### 👉 분류, 시대, 소재지 등 문화재의 자세한 데이터를 확인
-#### 👉 상단 갤러리에서 원본 크기의 문화재 이미지를 확인
+#### 👉 월별 버튼을 눌러 문화 일정 확인
+#### 👉 한 페이지 당 10개의 문화재 조회 페이징 처리 
+#### 👉 url이 표기된 경우 클릭시 관련 행사 사이트로 이동
 <br>
 <br>
 <br>
