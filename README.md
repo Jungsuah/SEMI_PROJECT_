@@ -156,7 +156,7 @@
   
 #### 👉 우측에서는 지도에 문화재 위치를 좌표로 구현 (경도와 위도 데이터 사용)
 #### 👉 지도는 카카오 API를 사용하여 구현, 해당 문화재의 위치를 확인 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
-#### 👉 클릭 시 해당 문화재/박물관 상세 페이지로 이동 <br><br>
+#### 👉 하트 클릭시 해당 문화재 찜하고, 마이 페이지로 이동하여 찜목록 확인 <br><br>
 <br>
 <br>
 <br>
