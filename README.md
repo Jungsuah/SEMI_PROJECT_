@@ -108,8 +108,7 @@
 <br>
 
 
-
-![main3](https://user-images.githubusercontent.com/110010716/222139939-59f83898-ae07-4f0f-8c4f-972563992b5e.gif)
+![main3](https://user-images.githubusercontent.com/110010716/222141509-708972db-ba43-4d59-b9b8-27c9b1f3ed59.gif)
 <br>
 #### 👉 인기 문화 명소는 회원들의 좋아요 갯수를 활용하여 기능 구현 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
 #### 👉 로그인한 사용자가 좋아요를 누르면, 좋아요 개수가 자동으로 오르고,
