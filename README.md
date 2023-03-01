@@ -96,11 +96,11 @@
 
 ### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/tree/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller">메인페이지 기능 소개</a>
 
-![main1](https://user-images.githubusercontent.com/110010716/222129600-fd3abc00-b41b-435f-8dfd-a2a845ba2a63.mp4)
+![main1](https://user-images.githubusercontent.com/110010716/222136100-1e0ba414-90a9-41fd-a1b1-3fb6ff1df59b.gif)
 <br>
 #### 👉 상단 검색바에서 키워드로 검색 가능 
 #### 👉 행사일정 정보 조회, 커뮤니티 글 최신순 조회, 사뿐코스, 사뿐몰 인기 상품 조회 가능
-![main2](https://user-images.githubusercontent.com/110010716/222128977-f919899a-288e-4ad8-ad70-5e891bb0de9b.mp4)
+![main2](https://user-images.githubusercontent.com/110010716/222136261-1566824f-edcc-4850-849b-e135b8ef5db3.gif)
 <br>
 #### 👉 더보기 클릭 시 해당 기능 페이지로 이동 <br><br>
 <br>
