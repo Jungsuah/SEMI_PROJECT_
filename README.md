@@ -96,15 +96,23 @@
 
 ### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/tree/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller">메인페이지 기능 소개</a>
 
-![제목 없는 동영상 - Clipchamp로 제작 (1)](https://user-images.githubusercontent.com/110010716/222113612-2851d10e-c4ac-4db9-a8e5-c6ecfa06907d.gif)
+![main1](https://user-images.githubusercontent.com/110010716/222128955-34f6c4ce-08d4-42ff-859e-2512aa4cd53f.mp4)
 <br>
 #### 👉 상단 검색바에서 키워드로 검색 가능 
 #### 👉 행사일정 정보 조회, 커뮤니티 글 최신순 조회, 사뿐코스, 사뿐몰 인기 상품 조회 가능
+![main2](https://user-images.githubusercontent.com/110010716/222128977-f919899a-288e-4ad8-ad70-5e891bb0de9b.mp4)
+<br>
 #### 👉 더보기 클릭 시 해당 기능 페이지로 이동 <br><br>
 <br>
 <br>
 
-![main2](https://user-images.githubusercontent.com/101553623/221747721-bbd3eb28-9226-4251-b0cb-728d30204c19.gif)
+
+
+
+
+
+
+
 <br>
 
 #### 👉 인기 문화 명소는 회원들의 좋아요 갯수를 활용하여 기능 구현 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
