@@ -126,7 +126,7 @@
 #### 👉 한 페이지 당 9개의 문화재 조회 페이징 처리 
 #### 👉 검색된 항목 (대표이미지, 위치, 문화재명, 요약설명, 찜 개수) 확인 가능
 #### 👉 조회된 문화재 클릭 시 상세 페이지로 이동
-#### 👉 키워드와 체크박스를 활용한 5중 조건 검색 (키워드, 지역, 지정연도, 시대, 유형 분류)  <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java"> SQL문</a>
+#### 👉 키워드와 체크박스를 활용한 5중 조건 검색 (키워드, 지역, 지정연도, 시대, 유형 분류)  <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java"> | 검색 SQL문 </a>
 - 키워드 : 문화재 이름에 포함된 문자 있으면 조회 (선택)
 - 지역 : 16가지 항목 중 하나라도 포함된 문화재면 조회 (미선택 or 중복 선택 가능)
 - 지정연도 : 스크롤로 지정한 연도 범위에 포함된 문화재면 조회 (미선택 or 단일 선택 가능)
