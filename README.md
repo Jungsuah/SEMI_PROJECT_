@@ -155,7 +155,7 @@
 <br>
   
 #### 👉 우측에서는 지도에 문화재 위치를 좌표로 구현 (경도와 위도 데이터 사용)
-#### 👉 지도는 카카오 API를 사용하여 구현, 해당 문화재의 위치를 확인 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/dao/HeritageDao.java">(URL)</a>
+#### 👉 지도는 카카오 API를 사용하여 구현, 해당 문화재의 위치를 확인 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/webapp/views/heritage/heritageDetail.jsp">(URL)</a>
 #### 👉 하트 클릭시 해당 문화재 찜하고, 마이 페이지로 이동하여 찜목록 확인 <br><br>
 <br>
 <br>
@@ -173,9 +173,11 @@
 
 ### <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/event/controller/FestivalServlet.java">월별 행사일정 페이지 기능 소개</a>
 
-![detail1](https://user-images.githubusercontent.com/101553623/221749389-65e90818-a3d1-4034-8c7e-f38ebb470808.gif)
+![detail1](https://user-images.githubusercontent.com/110010716/222153814-187e68b2-dde8-429e-9318-184549e881d7.gif)
 <br>
 
+![detail1](https://user-images.githubusercontent.com/110010716/222153824-d2a0ac99-e68d-4a79-9d64-344842ec9d7b.gif)
+<br>
 #### 👉 월별 버튼을 눌러 문화 일정 확인 <a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/event/dao/FestivalDao.java">(URL)</a>
 #### 👉 한 페이지 당 10개의 문화재 조회 페이징 처리 
 #### 👉 url이 표기된 경우 클릭시 관련 행사 사이트로 이동
