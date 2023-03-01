@@ -161,7 +161,7 @@
 ![detail3](https://user-images.githubusercontent.com/101553623/221750839-e0727128-4c87-4dc9-9842-1198e34ca43b.gif)
 <br>
 
-#### 👉 하단에서 리뷰 작성 기능<a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller/HertiageReviewWriteServlet.java">(URL)</a>
+#### 👉 하단에서 리뷰 작성 기능<a href="https://github.com/Jungsuah/SEMI_PROJECT_/blob/main/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/SEMI_PROJECT_%EC%82%AC%EB%BF%90%EC%82%AC%EB%BF%90_Spring/src/main/java/semi/heritage/heritageInfo/controller/HertiageReviewWriteServlet.java"> (URL)</a>
 #### 👉 최근 4개의 리뷰 확인, 더보기 버튼으로 모든 리뷰를 확인 가능<br><br>
 <br>
 <br>
